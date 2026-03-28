@@ -52,8 +52,8 @@ export default function FileUpload({ onDataLoaded }) {
         <h1 className="text-3xl font-bold text-slate-800 mb-2">
           AI 평가 캘리브레이션 대시보드
         </h1>
-        <p className="text-slate-500 max-w-xl">
-          평가자 간 점수 차이, 한눈에 파악하세요.
+        <p className="text-slate-500 max-w-2xl">
+          1차 평가와 2차 검수 결과를 비교해서 정확도와 수정 패턴을 확인합니다.
         </p>
       </div>
 

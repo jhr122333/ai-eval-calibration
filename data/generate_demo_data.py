@@ -1,201 +1,279 @@
 """
 generate_demo_data.py
 
-Generates a synthetic calibration dataset for the AI Eval Calibration Dashboard demo.
-Outputs: demo_calibration_data.csv (2,520 rows)
+Generates a synthetic primary-vs-secondary review dataset for the calibration
+dashboard demo.
+
+Outputs:
+  - data/demo_calibration_data.csv
+  - public/demo_calibration_data.csv
 
 Patterns intentionally embedded:
-  1. Criterion-level disagreement: 'tone' and 'consistency' have high inter-rater variance
-  2. Evaluator bias: eval_01/eval_02 are lenient (70%+ score=2), eval_11/eval_12 are strict (30%+ score=0)
-  3. Controversial content: content_005, content_012, content_023 — scores 0~2 evenly distributed
-  4. High-agreement content (control): content_001, content_010, content_020 — near-uniform scores
+  1. Primary evaluator accuracy differences: eval_01/eval_02 are strong,
+     eval_11/eval_12 are frequently corrected.
+  2. Reviewer variance: reviewers are mostly aligned, but review_03 is slightly
+     stricter and review_04 is slightly more lenient.
+  3. Criterion difficulty: tone, consistency, and completeness have higher
+     correction rates than other criteria.
+  4. Controversial contents: content_005, content_012, content_023 produce more
+     review changes.
 """
+
+from __future__ import annotations
 
 import csv
 import random
-import statistics
 from pathlib import Path
 
-# ── Config ─────────────────────────────────────────────────────────────────────
 RANDOM_SEED = 42
-NUM_EVALUATORS = 12
+NUM_PRIMARY_EVALUATORS = 12
+NUM_REVIEWERS = 4
 NUM_CONTENTS = 30
-CRITERIA = ["accuracy", "completeness", "consistency", "clarity", "relevance", "conciseness", "tone"]
-OUTPUT_FILE = Path(__file__).parent / "demo_calibration_data.csv"
+CRITERIA = [
+    "accuracy",
+    "completeness",
+    "consistency",
+    "clarity",
+    "relevance",
+    "conciseness",
+    "tone",
+]
 
-# ── Reason templates (Korean, 5+ variants per criterion) ──────────────────────
-REASONS = {
+DATA_OUTPUT = Path(__file__).parent / "demo_calibration_data.csv"
+PUBLIC_OUTPUT = Path(__file__).resolve().parent.parent / "public" / "demo_calibration_data.csv"
+
+PRIMARY_REASON_TEMPLATES = {
     "accuracy": [
-        "사실과 다른 정보가 포함되어 있음",
-        "출처와 일치하지 않는 내용이 서술됨",
-        "수치 오류가 발견됨",
-        "잘못된 날짜 또는 인물 정보가 포함됨",
-        "검증되지 않은 내용이 단정적으로 기술됨",
-        "핵심 사실 관계가 뒤바뀌어 서술됨",
+        "핵심 사실 검증이 충분하지 않음",
+        "수치 근거가 약해 1차에서 낮게 판단함",
+        "출처 불일치 가능성이 보여 감점함",
     ],
     "completeness": [
-        "핵심 정보가 누락됨",
-        "요청 범위의 절반만 다룸",
-        "중요한 예외 사항이 언급되지 않음",
-        "결론 부분이 생략됨",
-        "요청한 항목 중 일부가 다뤄지지 않음",
-        "배경 설명이 빠져 맥락 파악이 어려움",
+        "필수 요소 일부가 빠졌다고 판단함",
+        "요청 범위를 충분히 다루지 못했다고 봄",
+        "결론 정보가 부족해 낮게 평가함",
     ],
     "consistency": [
-        "앞뒤 문맥이 모순됨",
-        "동일 개념에 다른 용어를 혼용",
-        "초반과 후반의 주장이 상충됨",
-        "같은 수치를 다르게 표기함",
-        "문단 간 논리 흐름이 단절됨",
-        "입장이 중간에 바뀌어 혼선을 야기함",
+        "앞뒤 논리 연결이 약하다고 판단함",
+        "용어 사용이 흔들린다고 봄",
+        "문단 간 주장이 완전히 정렬되지 않음",
     ],
     "clarity": [
-        "문장 구조가 모호하여 의미 파악 어려움",
-        "전문 용어 설명 없이 사용됨",
-        "지시어 지칭 대상이 불명확함",
-        "문장이 지나치게 길어 가독성이 떨어짐",
-        "핵심 메시지가 어디인지 파악하기 어려움",
-        "단락 구분이 없어 내용 흐름을 따라가기 어려움",
+        "문장이 다소 길어 이해가 느려짐",
+        "핵심 메시지가 빠르게 드러나지 않음",
+        "독자가 한 번 더 읽어야 할 표현이 있음",
     ],
     "relevance": [
-        "주제와 무관한 내용이 포함됨",
-        "질문에 대한 직접적 답변이 아님",
-        "요청 범위를 벗어난 부가 설명이 과도함",
-        "중심 주제에서 벗어나 지엽적 내용에 집중함",
-        "답변이 다른 질문에 더 적합한 내용으로 구성됨",
-        "배경 설명이 지나쳐 본론이 묻힘",
+        "본론과 직접 관련 없는 설명이 섞여 있음",
+        "질문 의도와 다소 비껴간다고 판단함",
+        "부가 설명 비중이 높아 감점함",
     ],
     "conciseness": [
-        "불필요한 반복이 많음",
-        "핵심 대비 분량이 과도함",
-        "같은 내용을 다른 표현으로 여러 번 서술함",
-        "간결하게 전달 가능한 내용을 길게 풀어씀",
-        "서론이 너무 길어 본론에 도달하기까지 시간이 걸림",
-        "불필요한 수식어와 부연 설명이 많음",
+        "같은 메시지가 반복된다고 느낌",
+        "핵심 대비 설명량이 많다고 판단함",
+        "조금 더 압축 가능하다고 봄",
     ],
     "tone": [
-        "비격식적 표현이 부적절하게 사용됨",
-        "톤이 대상 독자에 맞지 않음",
-        "지나치게 딱딱한 표현으로 전달력이 낮음",
-        "감정적 표현이 과도하게 사용됨",
-        "대상 연령층에 맞지 않는 어조가 사용됨",
-        "전문적 맥락에서 부적절한 구어체가 포함됨",
+        "대상 독자 대비 어조가 어색하다고 판단함",
+        "표현 톤이 문맥과 살짝 어긋난다고 봄",
+        "격식 수준이 기대치와 맞지 않는다고 판단함",
     ],
 }
 
-# ── Score probability distributions ───────────────────────────────────────────
+SECONDARY_REASON_TEMPLATES = {
+    "accuracy": [
+        "검수 기준상 사실 근거가 불충분함",
+        "SOP 기준으로는 사실 정확성 감점이 필요함",
+        "검수 시점에 근거 부족으로 수정함",
+    ],
+    "completeness": [
+        "검수 기준상 핵심 항목 누락이 확인됨",
+        "요청된 범위를 다 채우지 못해 수정함",
+        "필수 정보 부족으로 2차 점수를 조정함",
+    ],
+    "consistency": [
+        "SOP 기준상 내부 논리 불일치가 보임",
+        "검수 시 용어 혼선이 더 크게 판단됨",
+        "문맥 모순이 있어 2차에서 수정함",
+    ],
+    "clarity": [
+        "검수 기준상 독자 이해를 방해하는 표현이 있음",
+        "문장 구조가 SOP 기준보다 모호함",
+        "가독성 문제로 점수를 조정함",
+    ],
+    "relevance": [
+        "질문과 직접 연결되지 않는 설명이 과함",
+        "SOP 기준상 주제 이탈이 확인됨",
+        "검수 시 관련성 부족으로 수정함",
+    ],
+    "conciseness": [
+        "반복 서술이 검수 기준을 넘는다고 판단함",
+        "SOP 기준상 군더더기가 있어 조정함",
+        "핵심 대비 분량 과다로 점수를 수정함",
+    ],
+    "tone": [
+        "검수 기준상 문맥에 맞지 않는 톤이 확인됨",
+        "어조가 대상 독자 기대와 달라 수정함",
+        "SOP 톤 기준과 차이가 있어 2차 조정함",
+    ],
+}
 
-def get_score_weights(evaluator_id: str, criterion: str, content_id: str) -> list[float]:
-    """Return [P(0), P(1), P(2)] weights for this (evaluator, criterion, content) triple."""
-    # Default: balanced
-    weights = [0.20, 0.45, 0.35]
 
-    # Pattern 2 — evaluator bias
-    if evaluator_id in ("eval_01", "eval_02"):
-        weights = [0.05, 0.20, 0.75]  # lenient
-    elif evaluator_id in ("eval_11", "eval_12"):
-        weights = [0.35, 0.40, 0.25]  # strict
-
-    # Pattern 1 — criterion-level disagreement (tone & consistency)
-    if criterion in ("tone", "consistency"):
-        # Flatten the distribution to increase variance
-        weights = [weights[0] * 1.5, weights[1] * 0.7, weights[2] * 1.2]
-
-    # Pattern 3 — controversial content: nearly uniform distribution
-    if content_id in ("content_005", "content_012", "content_023"):
-        weights = [0.33, 0.34, 0.33]
-
-    # Pattern 4 — high-agreement content: skew strongly toward 2
-    if content_id in ("content_001", "content_010", "content_020"):
-        weights = [0.02, 0.08, 0.90]
-
-    # Normalize
-    total = sum(weights)
-    return [w / total for w in weights]
+def clamp_score(score: int) -> int:
+    return max(0, min(2, score))
 
 
-def pick_score(weights: list[float], rng: random.Random) -> int:
+def choose_reason(score: int, criterion: str, templates: dict[str, list[str]], rng: random.Random) -> str:
+    if score != 0:
+        return ""
+    return rng.choice(templates[criterion])
+
+
+def base_secondary_score(content_id: str, criterion: str, rng: random.Random) -> int:
+    weights = [0.14, 0.36, 0.50]
+
+    if criterion in {"tone", "consistency"}:
+        weights = [0.24, 0.34, 0.42]
+    elif criterion == "completeness":
+        weights = [0.18, 0.40, 0.42]
+
+    if content_id in {"content_005", "content_012", "content_023"}:
+        weights = [0.30, 0.36, 0.34]
+    elif content_id in {"content_001", "content_010", "content_020"}:
+        weights = [0.05, 0.20, 0.75]
+
     return rng.choices([0, 1, 2], weights=weights, k=1)[0]
 
 
-def pick_reason(criterion: str, rng: random.Random) -> str:
-    return rng.choice(REASONS[criterion])
+def primary_adjustment(evaluator_id: str, criterion: str, content_id: str, rng: random.Random) -> int:
+    adjustment = 0
+
+    if evaluator_id in {"eval_01", "eval_02"}:
+        adjustment += rng.choices([-1, 0, 1], weights=[0.10, 0.55, 0.35], k=1)[0]
+    elif evaluator_id in {"eval_11", "eval_12"}:
+        adjustment += rng.choices([-1, 0, 1], weights=[0.40, 0.45, 0.15], k=1)[0]
+    else:
+        adjustment += rng.choices([-1, 0, 1], weights=[0.20, 0.60, 0.20], k=1)[0]
+
+    if criterion == "tone":
+        adjustment += rng.choices([-1, 0, 1], weights=[0.28, 0.44, 0.28], k=1)[0]
+    elif criterion == "consistency":
+        adjustment += rng.choices([-1, 0, 1], weights=[0.26, 0.48, 0.26], k=1)[0]
+    elif criterion == "completeness":
+        adjustment += rng.choices([-1, 0, 1], weights=[0.22, 0.56, 0.22], k=1)[0]
+
+    if content_id in {"content_005", "content_012", "content_023"}:
+        adjustment += rng.choices([-1, 0, 1], weights=[0.30, 0.40, 0.30], k=1)[0]
+
+    return adjustment
 
 
-# ── Main generation ────────────────────────────────────────────────────────────
+def secondary_adjustment(reviewer_id: str, rng: random.Random) -> int:
+    if reviewer_id == "review_03":
+        return rng.choices([-1, 0, 1], weights=[0.35, 0.55, 0.10], k=1)[0]
+    if reviewer_id == "review_04":
+        return rng.choices([-1, 0, 1], weights=[0.10, 0.55, 0.35], k=1)[0]
+    return rng.choices([-1, 0, 1], weights=[0.15, 0.70, 0.15], k=1)[0]
 
-def generate(seed: int = RANDOM_SEED) -> list[dict]:
+
+def generate(seed: int = RANDOM_SEED) -> list[dict[str, str | int]]:
     rng = random.Random(seed)
-    rows = []
+    rows: list[dict[str, str | int]] = []
 
-    for c_num in range(1, NUM_CONTENTS + 1):
-        content_id = f"content_{c_num:03d}"
-        for e_num in range(1, NUM_EVALUATORS + 1):
-            evaluator_id = f"eval_{e_num:02d}"
+    for content_number in range(1, NUM_CONTENTS + 1):
+        content_id = f"content_{content_number:03d}"
+        for evaluator_number in range(1, NUM_PRIMARY_EVALUATORS + 1):
+            primary_evaluator_id = f"eval_{evaluator_number:02d}"
+            reviewer_id = f"review_{((evaluator_number - 1) % NUM_REVIEWERS) + 1:02d}"
+
             for criterion in CRITERIA:
-                weights = get_score_weights(evaluator_id, criterion, content_id)
-                score = pick_score(weights, rng)
-                reason = pick_reason(criterion, rng) if score == 0 else ""
-                rows.append({
-                    "content_id": content_id,
-                    "evaluator_id": evaluator_id,
-                    "criterion": criterion,
-                    "score": score,
-                    "reason": reason,
-                })
+                secondary_score = clamp_score(
+                    base_secondary_score(content_id, criterion, rng)
+                    + secondary_adjustment(reviewer_id, rng)
+                )
+                primary_score = clamp_score(
+                    secondary_score + primary_adjustment(primary_evaluator_id, criterion, content_id, rng)
+                )
+
+                rows.append(
+                    {
+                        "content_id": content_id,
+                        "primary_evaluator_id": primary_evaluator_id,
+                        "reviewer_id": reviewer_id,
+                        "criterion": criterion,
+                        "primary_score": primary_score,
+                        "secondary_score": secondary_score,
+                        "primary_reason": choose_reason(primary_score, criterion, PRIMARY_REASON_TEMPLATES, rng),
+                        "secondary_reason": choose_reason(secondary_score, criterion, SECONDARY_REASON_TEMPLATES, rng),
+                    }
+                )
 
     return rows
 
 
-def save_csv(rows: list[dict], path: Path) -> None:
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["content_id", "evaluator_id", "criterion", "score", "reason"])
+def save_csv(rows: list[dict[str, str | int]], path: Path) -> None:
+    fieldnames = [
+        "content_id",
+        "primary_evaluator_id",
+        "reviewer_id",
+        "criterion",
+        "primary_score",
+        "secondary_score",
+        "primary_reason",
+        "secondary_reason",
+    ]
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
-    print(f"Saved {len(rows)} rows → {path}")
+    print(f"Saved {len(rows)} rows -> {path}")
 
 
-# ── Summary statistics ─────────────────────────────────────────────────────────
+def accuracy(rows: list[dict[str, str | int]]) -> float:
+    if not rows:
+        return 0.0
+    matches = sum(1 for row in rows if row["primary_score"] == row["secondary_score"])
+    return matches / len(rows)
 
-def print_summary(rows: list[dict]) -> None:
-    scores = [r["score"] for r in rows]
-    total = len(scores)
 
-    print("\n=== Overall Score Distribution ===")
-    for s in [0, 1, 2]:
-        count = scores.count(s)
-        print(f"  Score {s}: {count:>5} ({count/total*100:.1f}%)")
+def print_summary(rows: list[dict[str, str | int]]) -> None:
+    print("\n=== Overall Review Accuracy ===")
+    print(f"  Accuracy: {accuracy(rows) * 100:.1f}%")
 
-    print("\n=== Mean Score by Criterion ===")
+    changed_rows = [row for row in rows if row["primary_score"] != row["secondary_score"]]
+    print(f"  Changed rows: {len(changed_rows)} / {len(rows)}")
+
+    print("\n=== Accuracy by Primary Evaluator ===")
+    for evaluator_number in range(1, NUM_PRIMARY_EVALUATORS + 1):
+        evaluator_id = f"eval_{evaluator_number:02d}"
+        evaluator_rows = [row for row in rows if row["primary_evaluator_id"] == evaluator_id]
+        print(f"  {evaluator_id}: {accuracy(evaluator_rows) * 100:5.1f}%")
+
+    print("\n=== Change Rate by Criterion ===")
     for criterion in CRITERIA:
-        vals = [r["score"] for r in rows if r["criterion"] == criterion]
-        print(f"  {criterion:<14}: {statistics.mean(vals):.3f}")
+        criterion_rows = [row for row in rows if row["criterion"] == criterion]
+        change_rate = 1 - accuracy(criterion_rows)
+        print(f"  {criterion:<14}: {change_rate * 100:5.1f}%")
 
-    print("\n=== Mean Score by Evaluator ===")
-    for e_num in range(1, NUM_EVALUATORS + 1):
-        evaluator_id = f"eval_{e_num:02d}"
-        vals = [r["score"] for r in rows if r["evaluator_id"] == evaluator_id]
-        print(f"  {evaluator_id}: {statistics.mean(vals):.3f}")
+    print("\n=== Top 10 Evaluator-Criterion Change Rates ===")
+    ranked: list[tuple[str, str, float, int]] = []
+    for evaluator_number in range(1, NUM_PRIMARY_EVALUATORS + 1):
+        evaluator_id = f"eval_{evaluator_number:02d}"
+        for criterion in CRITERIA:
+            subset = [
+                row for row in rows
+                if row["primary_evaluator_id"] == evaluator_id and row["criterion"] == criterion
+            ]
+            change_count = sum(1 for row in subset if row["primary_score"] != row["secondary_score"])
+            ranked.append((evaluator_id, criterion, change_count / len(subset), change_count))
 
-    print("\n=== Top 10 Content-Criterion Combos by Std Dev ===")
-    combos = {}
-    for r in rows:
-        key = (r["content_id"], r["criterion"])
-        combos.setdefault(key, []).append(r["score"])
+    ranked.sort(key=lambda item: item[2], reverse=True)
+    for evaluator_id, criterion, rate, count in ranked[:10]:
+        print(f"  {evaluator_id} / {criterion:<14}: {rate * 100:5.1f}% ({count:>2} changes)")
 
-    ranked = sorted(
-        [(key, statistics.stdev(vals)) for key, vals in combos.items() if len(vals) > 1],
-        key=lambda x: x[1],
-        reverse=True,
-    )
-    for (content_id, criterion), stdev in ranked[:10]:
-        vals = combos[(content_id, criterion)]
-        print(f"  {content_id} / {criterion:<14}: stdev={stdev:.3f}  scores={sorted(vals)}")
-
-
-# ── Entry point ────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    rows = generate(seed=RANDOM_SEED)
-    save_csv(rows, OUTPUT_FILE)
-    print_summary(rows)
+    generated_rows = generate(seed=RANDOM_SEED)
+    save_csv(generated_rows, DATA_OUTPUT)
+    save_csv(generated_rows, PUBLIC_OUTPUT)
+    print_summary(generated_rows)

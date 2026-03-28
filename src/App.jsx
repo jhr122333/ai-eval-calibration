@@ -39,7 +39,7 @@ export default function App() {
             <span className="font-bold text-slate-800 text-base">AI 평가 캘리브레이션</span>
             <span className="hidden md:inline text-slate-300">|</span>
             <span className="hidden md:inline text-slate-500 text-sm">
-              콘텐츠 {dataset.summary.contents.length}개 &middot; 평가자 {dataset.summary.evaluators.length}명 &middot; 항목 {dataset.summary.criteria.length}개 &middot; {dataset.summary.rows.toLocaleString()}행
+              총 갯수 {dataset.summary.contents.length.toLocaleString()}개 &middot; 1차 평가자 {dataset.summary.evaluators.length}명 &middot; 평가 항목 {dataset.summary.criteria.length}개
             </span>
           </div>
           <button

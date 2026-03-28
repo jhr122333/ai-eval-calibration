@@ -1,8 +1,19 @@
-import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ErrorBar, Cell,
-} from 'recharts';
-import { calculateDisagreement, calculateContentSummary } from '../utils/disagreementDetector';
 import { useMemo } from 'react';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from 'recharts';
+import {
+  calculateReviewSummary,
+  calculateCriterionChangeRates,
+  calculateContentChangeSummary,
+} from '../utils/disagreementDetector';
 
 const CRITERION_LABELS = {
   accuracy: '정확성',
@@ -14,136 +25,102 @@ const CRITERION_LABELS = {
   tone: '톤 적절성',
 };
 
-function ScoreBar({ dist, total }) {
-  const p0 = ((dist[0] ?? 0) / total) * 100;
-  const p1 = ((dist[1] ?? 0) / total) * 100;
-  const p2 = ((dist[2] ?? 0) / total) * 100;
-  return (
-    <div className="flex h-4 w-full rounded overflow-hidden">
-      <div style={{ width: `${p0}%` }} className="bg-red-400" title={`Score 0: ${dist[0] ?? 0}`} />
-      <div style={{ width: `${p1}%` }} className="bg-amber-400" title={`Score 1: ${dist[1] ?? 0}`} />
-      <div style={{ width: `${p2}%` }} className="bg-emerald-400" title={`Score 2: ${dist[2] ?? 0}`} />
-    </div>
-  );
+function percent(value) {
+  return `${(value * 100).toFixed(1)}%`;
 }
 
-function SummaryCard({ label, value, sub, accent }) {
+function SummaryCard({ label, value, sub, accent = 'text-slate-800' }) {
   return (
-    <div className={`bg-white rounded-2xl border border-slate-200 p-5 shadow-sm`}>
+    <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
       <p className="text-sm text-slate-500 mb-1">{label}</p>
-      <p className={`text-3xl font-bold ${accent ?? 'text-slate-800'}`}>{value}</p>
-      {sub && <p className="text-xs text-slate-400 mt-1">{sub}</p>}
+      <p className={`text-3xl font-bold ${accent}`}>{value}</p>
+      {sub ? <p className="text-xs text-slate-400 mt-1">{sub}</p> : null}
     </div>
   );
 }
 
 export default function OverviewDashboard({ data, summary }) {
-  const disagreements = useMemo(() => calculateDisagreement(data), [data]);
-  const contentSummary = useMemo(() => calculateContentSummary(data), [data]);
+  const reviewSummary = useMemo(() => calculateReviewSummary(data), [data]);
+  const criterionChangeRates = useMemo(() => calculateCriterionChangeRates(data), [data]);
+  const contentChangeSummary = useMemo(() => calculateContentChangeSummary(data), [data]);
 
-  // Criterion-level averages and stdDevs
-  const criterionStats = useMemo(() => {
-    const map = {};
-    data.forEach(r => {
-      if (!map[r.criterion]) map[r.criterion] = [];
-      map[r.criterion].push(r.score);
-    });
-    return Object.entries(map).map(([criterion, scores]) => {
-      const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
-      const variance = scores.reduce((s, v) => s + (v - avg) ** 2, 0) / scores.length;
-      const sd = Math.sqrt(variance);
-      return { criterion, avg: parseFloat(avg.toFixed(3)), sd: parseFloat(sd.toFixed(3)) };
-    }).sort((a, b) => a.avg - b.avg);
-  }, [data]);
+  const criterionChartData = useMemo(
+    () =>
+      criterionChangeRates.map((item) => ({
+        ...item,
+        label: CRITERION_LABELS[item.criterion] ?? item.criterion,
+        changeRatePct: Number((item.changeRate * 100).toFixed(1)),
+      })),
+    [criterionChangeRates]
+  );
 
-  const avgStdDev = disagreements.length
-    ? (disagreements.reduce((s, d) => s + d.stdDev, 0) / disagreements.length).toFixed(3)
-    : '—';
-
-  const worstCriterion = criterionStats.length
-    ? criterionStats.reduce((a, b) => a.sd > b.sd ? a : b).criterion
-    : '—';
-
-  const top10 = disagreements.slice(0, 10);
+  const topContents = useMemo(() => contentChangeSummary.slice(0, 10), [contentChangeSummary]);
 
   return (
     <div className="space-y-6">
-      {/* Summary cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <SummaryCard label="총 콘텐츠 수" value={summary.contents.length} />
-        <SummaryCard label="평가자 수" value={summary.evaluators.length} />
-        <SummaryCard label="평균 표준편차" value={avgStdDev} sub="전체 콘텐츠-항목 조합 기준" accent="text-orange-600" />
+        <SummaryCard label="총 갯수" value={summary.contents.length.toLocaleString()} />
+        <SummaryCard label="평가 항목" value={`${summary.criteria.length}개`} />
         <SummaryCard
-          label="가장 불일치가 큰 항목"
-          value={CRITERION_LABELS[worstCriterion] ?? worstCriterion}
-          sub="표준편차 최고"
-          accent="text-red-600"
+          label="전체 정확도"
+          value={percent(reviewSummary.accuracy)}
+          sub={`변경 ${reviewSummary.changedCount.toLocaleString()}건`}
+          accent="text-emerald-600"
+        />
+        <SummaryCard
+          label="가장 많이 바뀐 항목"
+          value={CRITERION_LABELS[reviewSummary.worstCriterion?.criterion] ?? reviewSummary.worstCriterion?.criterion ?? '—'}
+          sub={reviewSummary.worstCriterion ? `변경률 ${percent(reviewSummary.worstCriterion.changeRate)}` : undefined}
+          accent="text-rose-600"
         />
       </div>
 
-      {/* Criterion chart + Top 10 table side by side */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        {/* Criterion bar chart */}
         <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
-          <h2 className="text-base font-semibold text-slate-700 mb-4">항목별 평균 점수</h2>
-          <ResponsiveContainer width="100%" height={260}>
-            <BarChart data={criterionStats} layout="vertical" margin={{ left: 16, right: 24 }}>
-              <CartesianGrid strokeDasharray="3 3" horizontal={false} />
-              <XAxis type="number" domain={[0, 2]} tickCount={5} tick={{ fontSize: 12 }} />
-              <YAxis type="category" dataKey="criterion" tick={{ fontSize: 12 }}
-                tickFormatter={v => CRITERION_LABELS[v] ?? v} width={90} />
-              <Tooltip
-                formatter={(value, name) => [value, name === 'avg' ? '평균' : '표준편차']}
-                labelFormatter={l => CRITERION_LABELS[l] ?? l}
-              />
-              <Bar dataKey="avg" name="avg" radius={[0, 4, 4, 0]}>
-                {criterionStats.map(entry => (
+          <h2 className="text-base font-semibold text-slate-700 mb-1">항목별 변경률</h2>
+          <p className="text-sm text-slate-500 mb-4">검수에서 자주 수정되는 기준을 바로 볼 수 있습니다.</p>
+          <ResponsiveContainer width="100%" height={280}>
+            <BarChart data={criterionChartData} margin={{ top: 8, right: 20, left: 0, bottom: 8 }}>
+              <CartesianGrid strokeDasharray="3 3" vertical={false} />
+              <XAxis dataKey="label" tick={{ fontSize: 11 }} interval={0} angle={-18} textAnchor="end" height={60} />
+              <YAxis tickFormatter={(value) => `${value}%`} tick={{ fontSize: 12 }} />
+              <Tooltip formatter={(value) => [`${value}%`, '변경률']} />
+              <Bar dataKey="changeRatePct" radius={[6, 6, 0, 0]}>
+                {criterionChartData.map((entry) => (
                   <Cell
                     key={entry.criterion}
-                    fill={entry.criterion === worstCriterion ? '#f97316' : '#3b82f6'}
+                    fill={entry.changeRate >= 0.4 ? '#ef4444' : entry.changeRate >= 0.33 ? '#f59e0b' : '#10b981'}
                   />
                 ))}
-                <ErrorBar dataKey="sd" width={4} strokeWidth={2} stroke="#94a3b8" />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
 
-        {/* Top 10 disagreement table */}
         <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
-          <h2 className="text-base font-semibold text-slate-700 mb-4">불일치 Top 10</h2>
+          <h2 className="text-base font-semibold text-slate-700 mb-1">변경이 많은 콘텐츠 Top 10</h2>
+          <p className="text-sm text-slate-500 mb-4">어떤 콘텐츠가 검수에서 가장 자주 수정됐는지 보여줍니다.</p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left text-slate-400 border-b border-slate-100">
                   <th className="pb-2 font-medium">콘텐츠</th>
-                  <th className="pb-2 font-medium">평가 항목</th>
-                  <th className="pb-2 font-medium text-right">표준편차</th>
-                  <th className="pb-2 font-medium pl-4">점수 분포</th>
+                  <th className="pb-2 font-medium text-right">정확도</th>
+                  <th className="pb-2 font-medium text-right">변경률</th>
+                  <th className="pb-2 font-medium text-right">변경 건수</th>
                 </tr>
               </thead>
               <tbody>
-                {top10.map((item, i) => {
-                  const total = Object.values(item.scoreDistribution).reduce((a, b) => a + b, 0);
-                  return (
-                    <tr key={i} className="border-b border-slate-50 hover:bg-slate-50">
-                      <td className="py-2 font-mono text-xs text-slate-600">{item.contentId}</td>
-                      <td className="py-2 text-slate-700">{CRITERION_LABELS[item.criterion] ?? item.criterion}</td>
-                      <td className="py-2 text-right font-semibold text-orange-600">{item.stdDev.toFixed(3)}</td>
-                      <td className="py-2 pl-4 w-28">
-                        <ScoreBar dist={item.scoreDistribution} total={total} />
-                      </td>
-                    </tr>
-                  );
-                })}
+                {topContents.map((item) => (
+                  <tr key={item.contentId} className="border-b border-slate-50 hover:bg-slate-50">
+                    <td className="py-2 font-mono text-xs text-slate-600">{item.contentId}</td>
+                    <td className="py-2 text-right font-semibold text-slate-800">{percent(item.accuracy)}</td>
+                    <td className="py-2 text-right font-semibold text-rose-600">{percent(item.changeRate)}</td>
+                    <td className="py-2 text-right text-slate-500">{item.changedCount}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
-          </div>
-          {/* Legend */}
-          <div className="flex gap-4 mt-3 text-xs text-slate-500">
-            <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-red-400 inline-block"/>0점</span>
-            <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-amber-400 inline-block"/>1점</span>
-            <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-emerald-400 inline-block"/>2점</span>
           </div>
         </div>
       </div>

@@ -179,3 +179,197 @@ export function generateHeatmapData(data, rowDimension = 'evaluator', valueMetri
 
   return { rows: rowKeys, columns: criteria, values };
 }
+
+function isReviewComparisonRow(row) {
+  return typeof row?.primaryScore === 'number' && typeof row?.secondaryScore === 'number';
+}
+
+function changeDirection(rows) {
+  return rows.reduce(
+    (acc, row) => {
+      if (row.secondaryScore > row.primaryScore) acc.upward += 1;
+      if (row.secondaryScore < row.primaryScore) acc.downward += 1;
+      return acc;
+    },
+    { upward: 0, downward: 0 }
+  );
+}
+
+/**
+ * Calculates overall review accuracy metrics for primary-vs-secondary comparison data.
+ */
+export function calculateReviewSummary(data) {
+  const rows = data.filter(isReviewComparisonRow);
+  const totalRows = rows.length;
+  const changedRows = rows.filter(row => row.primaryScore !== row.secondaryScore);
+  const matchedRows = totalRows - changedRows.length;
+  const criterionStats = calculateCriterionChangeRates(rows);
+  const evaluatorStats = calculateEvaluatorAccuracy(rows);
+  const directions = changeDirection(changedRows);
+
+  return {
+    totalRows,
+    matchedRows,
+    changedCount: changedRows.length,
+    accuracy: totalRows ? matchedRows / totalRows : 0,
+    upwardChanges: directions.upward,
+    downwardChanges: directions.downward,
+    worstCriterion: criterionStats[0] ?? null,
+    mostCorrectedEvaluator: evaluatorStats[0] ?? null,
+  };
+}
+
+/**
+ * Calculates per-primary-evaluator review accuracy metrics.
+ * Returns array sorted by changeRate descending.
+ */
+export function calculateEvaluatorAccuracy(data) {
+  const rows = data.filter(isReviewComparisonRow);
+  const grouped = groupBy(rows, row => row.primaryEvaluatorId);
+  const results = [];
+
+  grouped.forEach((evaluatorRows, evaluatorId) => {
+    const changedRows = evaluatorRows.filter(row => row.primaryScore !== row.secondaryScore);
+    const matchedRows = evaluatorRows.length - changedRows.length;
+    const directions = changeDirection(changedRows);
+
+    results.push({
+      evaluatorId,
+      total: evaluatorRows.length,
+      matchedCount: matchedRows,
+      changedCount: changedRows.length,
+      accuracy: evaluatorRows.length ? matchedRows / evaluatorRows.length : 0,
+      changeRate: evaluatorRows.length ? changedRows.length / evaluatorRows.length : 0,
+      upwardChanges: directions.upward,
+      downwardChanges: directions.downward,
+    });
+  });
+
+  return results.sort((a, b) => b.changeRate - a.changeRate);
+}
+
+/**
+ * Calculates per-criterion change rates.
+ * Returns array sorted by changeRate descending.
+ */
+export function calculateCriterionChangeRates(data) {
+  const rows = data.filter(isReviewComparisonRow);
+  const grouped = groupBy(rows, row => row.criterion);
+  const results = [];
+
+  grouped.forEach((criterionRows, criterion) => {
+    const changedRows = criterionRows.filter(row => row.primaryScore !== row.secondaryScore);
+    const matchedRows = criterionRows.length - changedRows.length;
+    const directions = changeDirection(changedRows);
+
+    results.push({
+      criterion,
+      total: criterionRows.length,
+      matchedCount: matchedRows,
+      changedCount: changedRows.length,
+      accuracy: criterionRows.length ? matchedRows / criterionRows.length : 0,
+      changeRate: criterionRows.length ? changedRows.length / criterionRows.length : 0,
+      upwardChanges: directions.upward,
+      downwardChanges: directions.downward,
+    });
+  });
+
+  return results.sort((a, b) => b.changeRate - a.changeRate);
+}
+
+/**
+ * Generates evaluator × criterion change-rate heatmap data.
+ * Returns percentage-style rates in 0..1 range.
+ */
+export function generateEvaluatorCriterionChangeHeatmap(data) {
+  const rows = data.filter(isReviewComparisonRow);
+  const evaluators = [...new Set(rows.map(row => row.primaryEvaluatorId))].sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true })
+  );
+  const criteria = [...new Set(rows.map(row => row.criterion))].sort();
+
+  const lookup = new Map();
+  rows.forEach((row) => {
+    const key = `${row.primaryEvaluatorId}__${row.criterion}`;
+    if (!lookup.has(key)) lookup.set(key, []);
+    lookup.get(key).push(row);
+  });
+
+  const values = evaluators.map((evaluatorId) =>
+    criteria.map((criterion) => {
+      const cellRows = lookup.get(`${evaluatorId}__${criterion}`) ?? [];
+      if (cellRows.length === 0) return null;
+      const changedCount = cellRows.filter((row) => row.primaryScore !== row.secondaryScore).length;
+      return changedCount / cellRows.length;
+    })
+  );
+
+  return { rows: evaluators, columns: criteria, values };
+}
+
+/**
+ * Calculates per-content review accuracy metrics.
+ * Returns array sorted by changeRate descending.
+ */
+export function calculateContentChangeSummary(data) {
+  const rows = data.filter(isReviewComparisonRow);
+  const grouped = groupBy(rows, row => row.contentId);
+  const results = [];
+
+  grouped.forEach((contentRows, contentId) => {
+    const changedRows = contentRows.filter(row => row.primaryScore !== row.secondaryScore);
+    const criterionGroups = groupBy(contentRows, row => row.criterion);
+    const criterionStats = {};
+
+    criterionGroups.forEach((criterionRows, criterion) => {
+      const changedCount = criterionRows.filter((row) => row.primaryScore !== row.secondaryScore).length;
+      const total = criterionRows.length;
+      criterionStats[criterion] = {
+        total,
+        changedCount,
+        accuracy: total ? (total - changedCount) / total : 0,
+        changeRate: total ? changedCount / total : 0,
+      };
+    });
+
+    results.push({
+      contentId,
+      total: contentRows.length,
+      changedCount: changedRows.length,
+      accuracy: contentRows.length ? (contentRows.length - changedRows.length) / contentRows.length : 0,
+      changeRate: contentRows.length ? changedRows.length / contentRows.length : 0,
+      criterionStats,
+    });
+  });
+
+  return results.sort((a, b) => b.changeRate - a.changeRate);
+}
+
+/**
+ * Generates content × criterion change-rate heatmap data.
+ */
+export function generateContentCriterionChangeHeatmap(data) {
+  const rows = data.filter(isReviewComparisonRow);
+  const contents = [...new Set(rows.map((row) => row.contentId))].sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true })
+  );
+  const criteria = [...new Set(rows.map((row) => row.criterion))].sort();
+
+  const lookup = new Map();
+  rows.forEach((row) => {
+    const key = `${row.contentId}__${row.criterion}`;
+    if (!lookup.has(key)) lookup.set(key, []);
+    lookup.get(key).push(row);
+  });
+
+  const values = contents.map((contentId) =>
+    criteria.map((criterion) => {
+      const cellRows = lookup.get(`${contentId}__${criterion}`) ?? [];
+      if (cellRows.length === 0) return null;
+      const changedCount = cellRows.filter((row) => row.primaryScore !== row.secondaryScore).length;
+      return changedCount / cellRows.length;
+    })
+  );
+
+  return { rows: contents, columns: criteria, values };
+}
