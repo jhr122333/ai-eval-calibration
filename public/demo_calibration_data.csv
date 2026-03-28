@@ -1,0 +1,2521 @@
+content_id,evaluator_id,criterion,score,reason
+content_001,eval_01,accuracy,2,
+content_001,eval_01,completeness,1,
+content_001,eval_01,consistency,2,
+content_001,eval_01,clarity,2,
+content_001,eval_01,relevance,2,
+content_001,eval_01,conciseness,2,
+content_001,eval_01,tone,2,
+content_001,eval_02,accuracy,1,
+content_001,eval_02,completeness,2,
+content_001,eval_02,consistency,1,
+content_001,eval_02,clarity,2,
+content_001,eval_02,relevance,2,
+content_001,eval_02,conciseness,1,
+content_001,eval_02,tone,2,
+content_001,eval_03,accuracy,2,
+content_001,eval_03,completeness,2,
+content_001,eval_03,consistency,2,
+content_001,eval_03,clarity,2,
+content_001,eval_03,relevance,2,
+content_001,eval_03,conciseness,0,핵심 대비 분량이 과도함
+content_001,eval_03,tone,2,
+content_001,eval_04,accuracy,2,
+content_001,eval_04,completeness,2,
+content_001,eval_04,consistency,2,
+content_001,eval_04,clarity,2,
+content_001,eval_04,relevance,1,
+content_001,eval_04,conciseness,1,
+content_001,eval_04,tone,2,
+content_001,eval_05,accuracy,2,
+content_001,eval_05,completeness,2,
+content_001,eval_05,consistency,2,
+content_001,eval_05,clarity,2,
+content_001,eval_05,relevance,2,
+content_001,eval_05,conciseness,2,
+content_001,eval_05,tone,2,
+content_001,eval_06,accuracy,2,
+content_001,eval_06,completeness,2,
+content_001,eval_06,consistency,2,
+content_001,eval_06,clarity,2,
+content_001,eval_06,relevance,2,
+content_001,eval_06,conciseness,1,
+content_001,eval_06,tone,2,
+content_001,eval_07,accuracy,2,
+content_001,eval_07,completeness,1,
+content_001,eval_07,consistency,2,
+content_001,eval_07,clarity,2,
+content_001,eval_07,relevance,2,
+content_001,eval_07,conciseness,2,
+content_001,eval_07,tone,2,
+content_001,eval_08,accuracy,2,
+content_001,eval_08,completeness,2,
+content_001,eval_08,consistency,2,
+content_001,eval_08,clarity,2,
+content_001,eval_08,relevance,2,
+content_001,eval_08,conciseness,2,
+content_001,eval_08,tone,2,
+content_001,eval_09,accuracy,2,
+content_001,eval_09,completeness,2,
+content_001,eval_09,consistency,2,
+content_001,eval_09,clarity,2,
+content_001,eval_09,relevance,2,
+content_001,eval_09,conciseness,2,
+content_001,eval_09,tone,2,
+content_001,eval_10,accuracy,2,
+content_001,eval_10,completeness,2,
+content_001,eval_10,consistency,2,
+content_001,eval_10,clarity,1,
+content_001,eval_10,relevance,2,
+content_001,eval_10,conciseness,2,
+content_001,eval_10,tone,2,
+content_001,eval_11,accuracy,2,
+content_001,eval_11,completeness,2,
+content_001,eval_11,consistency,2,
+content_001,eval_11,clarity,2,
+content_001,eval_11,relevance,2,
+content_001,eval_11,conciseness,2,
+content_001,eval_11,tone,2,
+content_001,eval_12,accuracy,2,
+content_001,eval_12,completeness,2,
+content_001,eval_12,consistency,2,
+content_001,eval_12,clarity,2,
+content_001,eval_12,relevance,2,
+content_001,eval_12,conciseness,2,
+content_001,eval_12,tone,2,
+content_002,eval_01,accuracy,1,
+content_002,eval_01,completeness,2,
+content_002,eval_01,consistency,2,
+content_002,eval_01,clarity,1,
+content_002,eval_01,relevance,0,주제와 무관한 내용이 포함됨
+content_002,eval_01,conciseness,1,
+content_002,eval_01,tone,1,
+content_002,eval_02,accuracy,2,
+content_002,eval_02,completeness,2,
+content_002,eval_02,consistency,2,
+content_002,eval_02,clarity,2,
+content_002,eval_02,relevance,2,
+content_002,eval_02,conciseness,2,
+content_002,eval_02,tone,2,
+content_002,eval_03,accuracy,2,
+content_002,eval_03,completeness,2,
+content_002,eval_03,consistency,0,문단 간 논리 흐름이 단절됨
+content_002,eval_03,clarity,2,
+content_002,eval_03,relevance,2,
+content_002,eval_03,conciseness,1,
+content_002,eval_03,tone,1,
+content_002,eval_04,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_002,eval_04,completeness,2,
+content_002,eval_04,consistency,2,
+content_002,eval_04,clarity,1,
+content_002,eval_04,relevance,1,
+content_002,eval_04,conciseness,0,불필요한 반복이 많음
+content_002,eval_04,tone,2,
+content_002,eval_05,accuracy,1,
+content_002,eval_05,completeness,1,
+content_002,eval_05,consistency,2,
+content_002,eval_05,clarity,0,전문 용어 설명 없이 사용됨
+content_002,eval_05,relevance,1,
+content_002,eval_05,conciseness,2,
+content_002,eval_05,tone,1,
+content_002,eval_06,accuracy,0,수치 오류가 발견됨
+content_002,eval_06,completeness,1,
+content_002,eval_06,consistency,0,초반과 후반의 주장이 상충됨
+content_002,eval_06,clarity,2,
+content_002,eval_06,relevance,2,
+content_002,eval_06,conciseness,1,
+content_002,eval_06,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_002,eval_07,accuracy,2,
+content_002,eval_07,completeness,0,결론 부분이 생략됨
+content_002,eval_07,consistency,2,
+content_002,eval_07,clarity,2,
+content_002,eval_07,relevance,1,
+content_002,eval_07,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_002,eval_07,tone,1,
+content_002,eval_08,accuracy,1,
+content_002,eval_08,completeness,1,
+content_002,eval_08,consistency,2,
+content_002,eval_08,clarity,1,
+content_002,eval_08,relevance,1,
+content_002,eval_08,conciseness,1,
+content_002,eval_08,tone,2,
+content_002,eval_09,accuracy,1,
+content_002,eval_09,completeness,1,
+content_002,eval_09,consistency,2,
+content_002,eval_09,clarity,1,
+content_002,eval_09,relevance,1,
+content_002,eval_09,conciseness,1,
+content_002,eval_09,tone,0,톤이 대상 독자에 맞지 않음
+content_002,eval_10,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_002,eval_10,completeness,1,
+content_002,eval_10,consistency,0,동일 개념에 다른 용어를 혼용
+content_002,eval_10,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_002,eval_10,relevance,1,
+content_002,eval_10,conciseness,1,
+content_002,eval_10,tone,2,
+content_002,eval_11,accuracy,2,
+content_002,eval_11,completeness,0,요청 범위의 절반만 다룸
+content_002,eval_11,consistency,0,같은 수치를 다르게 표기함
+content_002,eval_11,clarity,0,전문 용어 설명 없이 사용됨
+content_002,eval_11,relevance,1,
+content_002,eval_11,conciseness,2,
+content_002,eval_11,tone,1,
+content_002,eval_12,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_002,eval_12,completeness,2,
+content_002,eval_12,consistency,0,앞뒤 문맥이 모순됨
+content_002,eval_12,clarity,1,
+content_002,eval_12,relevance,1,
+content_002,eval_12,conciseness,1,
+content_002,eval_12,tone,2,
+content_003,eval_01,accuracy,1,
+content_003,eval_01,completeness,2,
+content_003,eval_01,consistency,2,
+content_003,eval_01,clarity,1,
+content_003,eval_01,relevance,2,
+content_003,eval_01,conciseness,2,
+content_003,eval_01,tone,1,
+content_003,eval_02,accuracy,1,
+content_003,eval_02,completeness,2,
+content_003,eval_02,consistency,1,
+content_003,eval_02,clarity,1,
+content_003,eval_02,relevance,2,
+content_003,eval_02,conciseness,2,
+content_003,eval_02,tone,1,
+content_003,eval_03,accuracy,2,
+content_003,eval_03,completeness,2,
+content_003,eval_03,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_003,eval_03,clarity,2,
+content_003,eval_03,relevance,2,
+content_003,eval_03,conciseness,2,
+content_003,eval_03,tone,2,
+content_003,eval_04,accuracy,2,
+content_003,eval_04,completeness,0,결론 부분이 생략됨
+content_003,eval_04,consistency,1,
+content_003,eval_04,clarity,2,
+content_003,eval_04,relevance,2,
+content_003,eval_04,conciseness,0,불필요한 반복이 많음
+content_003,eval_04,tone,2,
+content_003,eval_05,accuracy,1,
+content_003,eval_05,completeness,2,
+content_003,eval_05,consistency,1,
+content_003,eval_05,clarity,1,
+content_003,eval_05,relevance,2,
+content_003,eval_05,conciseness,2,
+content_003,eval_05,tone,1,
+content_003,eval_06,accuracy,2,
+content_003,eval_06,completeness,0,중요한 예외 사항이 언급되지 않음
+content_003,eval_06,consistency,0,앞뒤 문맥이 모순됨
+content_003,eval_06,clarity,1,
+content_003,eval_06,relevance,1,
+content_003,eval_06,conciseness,2,
+content_003,eval_06,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_003,eval_07,accuracy,1,
+content_003,eval_07,completeness,2,
+content_003,eval_07,consistency,1,
+content_003,eval_07,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_003,eval_07,relevance,0,질문에 대한 직접적 답변이 아님
+content_003,eval_07,conciseness,0,불필요한 반복이 많음
+content_003,eval_07,tone,2,
+content_003,eval_08,accuracy,1,
+content_003,eval_08,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_003,eval_08,consistency,0,문단 간 논리 흐름이 단절됨
+content_003,eval_08,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_003,eval_08,relevance,1,
+content_003,eval_08,conciseness,1,
+content_003,eval_08,tone,1,
+content_003,eval_09,accuracy,2,
+content_003,eval_09,completeness,1,
+content_003,eval_09,consistency,2,
+content_003,eval_09,clarity,1,
+content_003,eval_09,relevance,1,
+content_003,eval_09,conciseness,2,
+content_003,eval_09,tone,1,
+content_003,eval_10,accuracy,1,
+content_003,eval_10,completeness,2,
+content_003,eval_10,consistency,0,같은 수치를 다르게 표기함
+content_003,eval_10,clarity,1,
+content_003,eval_10,relevance,1,
+content_003,eval_10,conciseness,0,서론이 너무 길어 본론에 도달하기까지 시간이 걸림
+content_003,eval_10,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_003,eval_11,accuracy,0,수치 오류가 발견됨
+content_003,eval_11,completeness,2,
+content_003,eval_11,consistency,2,
+content_003,eval_11,clarity,1,
+content_003,eval_11,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_003,eval_11,conciseness,1,
+content_003,eval_11,tone,1,
+content_003,eval_12,accuracy,2,
+content_003,eval_12,completeness,1,
+content_003,eval_12,consistency,0,문단 간 논리 흐름이 단절됨
+content_003,eval_12,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_003,eval_12,relevance,0,질문에 대한 직접적 답변이 아님
+content_003,eval_12,conciseness,0,불필요한 반복이 많음
+content_003,eval_12,tone,2,
+content_004,eval_01,accuracy,1,
+content_004,eval_01,completeness,2,
+content_004,eval_01,consistency,2,
+content_004,eval_01,clarity,2,
+content_004,eval_01,relevance,2,
+content_004,eval_01,conciseness,2,
+content_004,eval_01,tone,2,
+content_004,eval_02,accuracy,2,
+content_004,eval_02,completeness,2,
+content_004,eval_02,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_004,eval_02,clarity,2,
+content_004,eval_02,relevance,2,
+content_004,eval_02,conciseness,0,핵심 대비 분량이 과도함
+content_004,eval_02,tone,2,
+content_004,eval_03,accuracy,1,
+content_004,eval_03,completeness,2,
+content_004,eval_03,consistency,1,
+content_004,eval_03,clarity,1,
+content_004,eval_03,relevance,0,주제와 무관한 내용이 포함됨
+content_004,eval_03,conciseness,2,
+content_004,eval_03,tone,2,
+content_004,eval_04,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_004,eval_04,completeness,2,
+content_004,eval_04,consistency,1,
+content_004,eval_04,clarity,0,전문 용어 설명 없이 사용됨
+content_004,eval_04,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_004,eval_04,conciseness,2,
+content_004,eval_04,tone,2,
+content_004,eval_05,accuracy,2,
+content_004,eval_05,completeness,2,
+content_004,eval_05,consistency,0,동일 개념에 다른 용어를 혼용
+content_004,eval_05,clarity,2,
+content_004,eval_05,relevance,1,
+content_004,eval_05,conciseness,1,
+content_004,eval_05,tone,2,
+content_004,eval_06,accuracy,2,
+content_004,eval_06,completeness,2,
+content_004,eval_06,consistency,2,
+content_004,eval_06,clarity,1,
+content_004,eval_06,relevance,0,질문에 대한 직접적 답변이 아님
+content_004,eval_06,conciseness,2,
+content_004,eval_06,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_004,eval_07,accuracy,2,
+content_004,eval_07,completeness,2,
+content_004,eval_07,consistency,1,
+content_004,eval_07,clarity,2,
+content_004,eval_07,relevance,2,
+content_004,eval_07,conciseness,1,
+content_004,eval_07,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_004,eval_08,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_004,eval_08,completeness,2,
+content_004,eval_08,consistency,0,같은 수치를 다르게 표기함
+content_004,eval_08,clarity,1,
+content_004,eval_08,relevance,2,
+content_004,eval_08,conciseness,2,
+content_004,eval_08,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_004,eval_09,accuracy,0,수치 오류가 발견됨
+content_004,eval_09,completeness,1,
+content_004,eval_09,consistency,0,초반과 후반의 주장이 상충됨
+content_004,eval_09,clarity,1,
+content_004,eval_09,relevance,1,
+content_004,eval_09,conciseness,2,
+content_004,eval_09,tone,2,
+content_004,eval_10,accuracy,1,
+content_004,eval_10,completeness,0,중요한 예외 사항이 언급되지 않음
+content_004,eval_10,consistency,0,초반과 후반의 주장이 상충됨
+content_004,eval_10,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_004,eval_10,relevance,1,
+content_004,eval_10,conciseness,2,
+content_004,eval_10,tone,1,
+content_004,eval_11,accuracy,1,
+content_004,eval_11,completeness,1,
+content_004,eval_11,consistency,0,문단 간 논리 흐름이 단절됨
+content_004,eval_11,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_004,eval_11,relevance,1,
+content_004,eval_11,conciseness,0,서론이 너무 길어 본론에 도달하기까지 시간이 걸림
+content_004,eval_11,tone,1,
+content_004,eval_12,accuracy,2,
+content_004,eval_12,completeness,1,
+content_004,eval_12,consistency,0,같은 수치를 다르게 표기함
+content_004,eval_12,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_004,eval_12,relevance,2,
+content_004,eval_12,conciseness,1,
+content_004,eval_12,tone,1,
+content_005,eval_01,accuracy,0,수치 오류가 발견됨
+content_005,eval_01,completeness,1,
+content_005,eval_01,consistency,1,
+content_005,eval_01,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_005,eval_01,relevance,0,질문에 대한 직접적 답변이 아님
+content_005,eval_01,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_005,eval_01,tone,2,
+content_005,eval_02,accuracy,2,
+content_005,eval_02,completeness,2,
+content_005,eval_02,consistency,1,
+content_005,eval_02,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_005,eval_02,relevance,2,
+content_005,eval_02,conciseness,0,핵심 대비 분량이 과도함
+content_005,eval_02,tone,1,
+content_005,eval_03,accuracy,1,
+content_005,eval_03,completeness,1,
+content_005,eval_03,consistency,1,
+content_005,eval_03,clarity,1,
+content_005,eval_03,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_005,eval_03,conciseness,2,
+content_005,eval_03,tone,2,
+content_005,eval_04,accuracy,2,
+content_005,eval_04,completeness,1,
+content_005,eval_04,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_005,eval_04,clarity,1,
+content_005,eval_04,relevance,1,
+content_005,eval_04,conciseness,2,
+content_005,eval_04,tone,2,
+content_005,eval_05,accuracy,2,
+content_005,eval_05,completeness,0,요청 범위의 절반만 다룸
+content_005,eval_05,consistency,0,앞뒤 문맥이 모순됨
+content_005,eval_05,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_005,eval_05,relevance,1,
+content_005,eval_05,conciseness,2,
+content_005,eval_05,tone,1,
+content_005,eval_06,accuracy,2,
+content_005,eval_06,completeness,1,
+content_005,eval_06,consistency,2,
+content_005,eval_06,clarity,1,
+content_005,eval_06,relevance,1,
+content_005,eval_06,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_005,eval_06,tone,0,비격식적 표현이 부적절하게 사용됨
+content_005,eval_07,accuracy,2,
+content_005,eval_07,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_005,eval_07,consistency,1,
+content_005,eval_07,clarity,0,전문 용어 설명 없이 사용됨
+content_005,eval_07,relevance,2,
+content_005,eval_07,conciseness,0,핵심 대비 분량이 과도함
+content_005,eval_07,tone,2,
+content_005,eval_08,accuracy,1,
+content_005,eval_08,completeness,2,
+content_005,eval_08,consistency,1,
+content_005,eval_08,clarity,2,
+content_005,eval_08,relevance,2,
+content_005,eval_08,conciseness,1,
+content_005,eval_08,tone,2,
+content_005,eval_09,accuracy,1,
+content_005,eval_09,completeness,2,
+content_005,eval_09,consistency,1,
+content_005,eval_09,clarity,2,
+content_005,eval_09,relevance,2,
+content_005,eval_09,conciseness,1,
+content_005,eval_09,tone,0,톤이 대상 독자에 맞지 않음
+content_005,eval_10,accuracy,2,
+content_005,eval_10,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_005,eval_10,consistency,1,
+content_005,eval_10,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_005,eval_10,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_005,eval_10,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_005,eval_10,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_005,eval_11,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_005,eval_11,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_005,eval_11,consistency,0,동일 개념에 다른 용어를 혼용
+content_005,eval_11,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_005,eval_11,relevance,1,
+content_005,eval_11,conciseness,1,
+content_005,eval_11,tone,0,감정적 표현이 과도하게 사용됨
+content_005,eval_12,accuracy,1,
+content_005,eval_12,completeness,2,
+content_005,eval_12,consistency,2,
+content_005,eval_12,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_005,eval_12,relevance,1,
+content_005,eval_12,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_005,eval_12,tone,0,감정적 표현이 과도하게 사용됨
+content_006,eval_01,accuracy,2,
+content_006,eval_01,completeness,2,
+content_006,eval_01,consistency,2,
+content_006,eval_01,clarity,2,
+content_006,eval_01,relevance,2,
+content_006,eval_01,conciseness,2,
+content_006,eval_01,tone,2,
+content_006,eval_02,accuracy,1,
+content_006,eval_02,completeness,2,
+content_006,eval_02,consistency,0,초반과 후반의 주장이 상충됨
+content_006,eval_02,clarity,2,
+content_006,eval_02,relevance,2,
+content_006,eval_02,conciseness,2,
+content_006,eval_02,tone,2,
+content_006,eval_03,accuracy,2,
+content_006,eval_03,completeness,2,
+content_006,eval_03,consistency,1,
+content_006,eval_03,clarity,2,
+content_006,eval_03,relevance,1,
+content_006,eval_03,conciseness,2,
+content_006,eval_03,tone,0,감정적 표현이 과도하게 사용됨
+content_006,eval_04,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_006,eval_04,completeness,0,중요한 예외 사항이 언급되지 않음
+content_006,eval_04,consistency,1,
+content_006,eval_04,clarity,1,
+content_006,eval_04,relevance,1,
+content_006,eval_04,conciseness,2,
+content_006,eval_04,tone,1,
+content_006,eval_05,accuracy,2,
+content_006,eval_05,completeness,2,
+content_006,eval_05,consistency,0,앞뒤 문맥이 모순됨
+content_006,eval_05,clarity,1,
+content_006,eval_05,relevance,2,
+content_006,eval_05,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_006,eval_05,tone,0,비격식적 표현이 부적절하게 사용됨
+content_006,eval_06,accuracy,2,
+content_006,eval_06,completeness,2,
+content_006,eval_06,consistency,2,
+content_006,eval_06,clarity,2,
+content_006,eval_06,relevance,0,주제와 무관한 내용이 포함됨
+content_006,eval_06,conciseness,1,
+content_006,eval_06,tone,0,감정적 표현이 과도하게 사용됨
+content_006,eval_07,accuracy,2,
+content_006,eval_07,completeness,1,
+content_006,eval_07,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_006,eval_07,clarity,1,
+content_006,eval_07,relevance,1,
+content_006,eval_07,conciseness,1,
+content_006,eval_07,tone,2,
+content_006,eval_08,accuracy,2,
+content_006,eval_08,completeness,2,
+content_006,eval_08,consistency,0,초반과 후반의 주장이 상충됨
+content_006,eval_08,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_006,eval_08,relevance,2,
+content_006,eval_08,conciseness,1,
+content_006,eval_08,tone,2,
+content_006,eval_09,accuracy,1,
+content_006,eval_09,completeness,2,
+content_006,eval_09,consistency,0,문단 간 논리 흐름이 단절됨
+content_006,eval_09,clarity,2,
+content_006,eval_09,relevance,1,
+content_006,eval_09,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_006,eval_09,tone,2,
+content_006,eval_10,accuracy,1,
+content_006,eval_10,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_006,eval_10,consistency,2,
+content_006,eval_10,clarity,1,
+content_006,eval_10,relevance,1,
+content_006,eval_10,conciseness,1,
+content_006,eval_10,tone,1,
+content_006,eval_11,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_006,eval_11,completeness,2,
+content_006,eval_11,consistency,0,초반과 후반의 주장이 상충됨
+content_006,eval_11,clarity,1,
+content_006,eval_11,relevance,2,
+content_006,eval_11,conciseness,1,
+content_006,eval_11,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_006,eval_12,accuracy,1,
+content_006,eval_12,completeness,1,
+content_006,eval_12,consistency,1,
+content_006,eval_12,clarity,2,
+content_006,eval_12,relevance,2,
+content_006,eval_12,conciseness,1,
+content_006,eval_12,tone,2,
+content_007,eval_01,accuracy,2,
+content_007,eval_01,completeness,2,
+content_007,eval_01,consistency,2,
+content_007,eval_01,clarity,2,
+content_007,eval_01,relevance,2,
+content_007,eval_01,conciseness,2,
+content_007,eval_01,tone,2,
+content_007,eval_02,accuracy,2,
+content_007,eval_02,completeness,2,
+content_007,eval_02,consistency,2,
+content_007,eval_02,clarity,2,
+content_007,eval_02,relevance,2,
+content_007,eval_02,conciseness,2,
+content_007,eval_02,tone,2,
+content_007,eval_03,accuracy,1,
+content_007,eval_03,completeness,1,
+content_007,eval_03,consistency,2,
+content_007,eval_03,clarity,2,
+content_007,eval_03,relevance,1,
+content_007,eval_03,conciseness,1,
+content_007,eval_03,tone,0,톤이 대상 독자에 맞지 않음
+content_007,eval_04,accuracy,2,
+content_007,eval_04,completeness,1,
+content_007,eval_04,consistency,2,
+content_007,eval_04,clarity,2,
+content_007,eval_04,relevance,1,
+content_007,eval_04,conciseness,1,
+content_007,eval_04,tone,2,
+content_007,eval_05,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_007,eval_05,completeness,1,
+content_007,eval_05,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_007,eval_05,clarity,1,
+content_007,eval_05,relevance,1,
+content_007,eval_05,conciseness,1,
+content_007,eval_05,tone,1,
+content_007,eval_06,accuracy,2,
+content_007,eval_06,completeness,1,
+content_007,eval_06,consistency,2,
+content_007,eval_06,clarity,1,
+content_007,eval_06,relevance,1,
+content_007,eval_06,conciseness,0,핵심 대비 분량이 과도함
+content_007,eval_06,tone,1,
+content_007,eval_07,accuracy,2,
+content_007,eval_07,completeness,2,
+content_007,eval_07,consistency,2,
+content_007,eval_07,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_007,eval_07,relevance,1,
+content_007,eval_07,conciseness,2,
+content_007,eval_07,tone,2,
+content_007,eval_08,accuracy,1,
+content_007,eval_08,completeness,1,
+content_007,eval_08,consistency,0,동일 개념에 다른 용어를 혼용
+content_007,eval_08,clarity,1,
+content_007,eval_08,relevance,1,
+content_007,eval_08,conciseness,1,
+content_007,eval_08,tone,2,
+content_007,eval_09,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_007,eval_09,completeness,2,
+content_007,eval_09,consistency,1,
+content_007,eval_09,clarity,2,
+content_007,eval_09,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_007,eval_09,conciseness,0,불필요한 반복이 많음
+content_007,eval_09,tone,1,
+content_007,eval_10,accuracy,1,
+content_007,eval_10,completeness,1,
+content_007,eval_10,consistency,0,앞뒤 문맥이 모순됨
+content_007,eval_10,clarity,1,
+content_007,eval_10,relevance,2,
+content_007,eval_10,conciseness,0,불필요한 반복이 많음
+content_007,eval_10,tone,1,
+content_007,eval_11,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_007,eval_11,completeness,1,
+content_007,eval_11,consistency,0,문단 간 논리 흐름이 단절됨
+content_007,eval_11,clarity,2,
+content_007,eval_11,relevance,0,질문에 대한 직접적 답변이 아님
+content_007,eval_11,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_007,eval_11,tone,1,
+content_007,eval_12,accuracy,2,
+content_007,eval_12,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_007,eval_12,consistency,0,같은 수치를 다르게 표기함
+content_007,eval_12,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_007,eval_12,relevance,2,
+content_007,eval_12,conciseness,0,서론이 너무 길어 본론에 도달하기까지 시간이 걸림
+content_007,eval_12,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_008,eval_01,accuracy,1,
+content_008,eval_01,completeness,2,
+content_008,eval_01,consistency,2,
+content_008,eval_01,clarity,2,
+content_008,eval_01,relevance,1,
+content_008,eval_01,conciseness,1,
+content_008,eval_01,tone,2,
+content_008,eval_02,accuracy,1,
+content_008,eval_02,completeness,2,
+content_008,eval_02,consistency,2,
+content_008,eval_02,clarity,2,
+content_008,eval_02,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_008,eval_02,conciseness,2,
+content_008,eval_02,tone,2,
+content_008,eval_03,accuracy,1,
+content_008,eval_03,completeness,2,
+content_008,eval_03,consistency,2,
+content_008,eval_03,clarity,2,
+content_008,eval_03,relevance,1,
+content_008,eval_03,conciseness,2,
+content_008,eval_03,tone,2,
+content_008,eval_04,accuracy,1,
+content_008,eval_04,completeness,1,
+content_008,eval_04,consistency,2,
+content_008,eval_04,clarity,2,
+content_008,eval_04,relevance,2,
+content_008,eval_04,conciseness,0,핵심 대비 분량이 과도함
+content_008,eval_04,tone,2,
+content_008,eval_05,accuracy,1,
+content_008,eval_05,completeness,2,
+content_008,eval_05,consistency,2,
+content_008,eval_05,clarity,1,
+content_008,eval_05,relevance,1,
+content_008,eval_05,conciseness,1,
+content_008,eval_05,tone,1,
+content_008,eval_06,accuracy,1,
+content_008,eval_06,completeness,1,
+content_008,eval_06,consistency,1,
+content_008,eval_06,clarity,1,
+content_008,eval_06,relevance,2,
+content_008,eval_06,conciseness,2,
+content_008,eval_06,tone,2,
+content_008,eval_07,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_008,eval_07,completeness,2,
+content_008,eval_07,consistency,2,
+content_008,eval_07,clarity,1,
+content_008,eval_07,relevance,2,
+content_008,eval_07,conciseness,2,
+content_008,eval_07,tone,2,
+content_008,eval_08,accuracy,1,
+content_008,eval_08,completeness,0,요청 범위의 절반만 다룸
+content_008,eval_08,consistency,1,
+content_008,eval_08,clarity,2,
+content_008,eval_08,relevance,2,
+content_008,eval_08,conciseness,0,서론이 너무 길어 본론에 도달하기까지 시간이 걸림
+content_008,eval_08,tone,1,
+content_008,eval_09,accuracy,2,
+content_008,eval_09,completeness,2,
+content_008,eval_09,consistency,1,
+content_008,eval_09,clarity,1,
+content_008,eval_09,relevance,1,
+content_008,eval_09,conciseness,0,핵심 대비 분량이 과도함
+content_008,eval_09,tone,1,
+content_008,eval_10,accuracy,2,
+content_008,eval_10,completeness,1,
+content_008,eval_10,consistency,2,
+content_008,eval_10,clarity,2,
+content_008,eval_10,relevance,1,
+content_008,eval_10,conciseness,1,
+content_008,eval_10,tone,1,
+content_008,eval_11,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_008,eval_11,completeness,2,
+content_008,eval_11,consistency,2,
+content_008,eval_11,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_008,eval_11,relevance,1,
+content_008,eval_11,conciseness,0,서론이 너무 길어 본론에 도달하기까지 시간이 걸림
+content_008,eval_11,tone,0,감정적 표현이 과도하게 사용됨
+content_008,eval_12,accuracy,1,
+content_008,eval_12,completeness,2,
+content_008,eval_12,consistency,0,문단 간 논리 흐름이 단절됨
+content_008,eval_12,clarity,0,지시어 지칭 대상이 불명확함
+content_008,eval_12,relevance,1,
+content_008,eval_12,conciseness,1,
+content_008,eval_12,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_009,eval_01,accuracy,2,
+content_009,eval_01,completeness,1,
+content_009,eval_01,consistency,1,
+content_009,eval_01,clarity,2,
+content_009,eval_01,relevance,2,
+content_009,eval_01,conciseness,1,
+content_009,eval_01,tone,2,
+content_009,eval_02,accuracy,2,
+content_009,eval_02,completeness,2,
+content_009,eval_02,consistency,1,
+content_009,eval_02,clarity,2,
+content_009,eval_02,relevance,2,
+content_009,eval_02,conciseness,2,
+content_009,eval_02,tone,2,
+content_009,eval_03,accuracy,1,
+content_009,eval_03,completeness,2,
+content_009,eval_03,consistency,2,
+content_009,eval_03,clarity,1,
+content_009,eval_03,relevance,1,
+content_009,eval_03,conciseness,1,
+content_009,eval_03,tone,2,
+content_009,eval_04,accuracy,1,
+content_009,eval_04,completeness,2,
+content_009,eval_04,consistency,2,
+content_009,eval_04,clarity,1,
+content_009,eval_04,relevance,2,
+content_009,eval_04,conciseness,1,
+content_009,eval_04,tone,2,
+content_009,eval_05,accuracy,1,
+content_009,eval_05,completeness,2,
+content_009,eval_05,consistency,0,초반과 후반의 주장이 상충됨
+content_009,eval_05,clarity,2,
+content_009,eval_05,relevance,1,
+content_009,eval_05,conciseness,2,
+content_009,eval_05,tone,2,
+content_009,eval_06,accuracy,1,
+content_009,eval_06,completeness,1,
+content_009,eval_06,consistency,1,
+content_009,eval_06,clarity,2,
+content_009,eval_06,relevance,1,
+content_009,eval_06,conciseness,2,
+content_009,eval_06,tone,2,
+content_009,eval_07,accuracy,2,
+content_009,eval_07,completeness,1,
+content_009,eval_07,consistency,1,
+content_009,eval_07,clarity,2,
+content_009,eval_07,relevance,1,
+content_009,eval_07,conciseness,1,
+content_009,eval_07,tone,1,
+content_009,eval_08,accuracy,2,
+content_009,eval_08,completeness,1,
+content_009,eval_08,consistency,2,
+content_009,eval_08,clarity,2,
+content_009,eval_08,relevance,2,
+content_009,eval_08,conciseness,0,불필요한 반복이 많음
+content_009,eval_08,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_009,eval_09,accuracy,1,
+content_009,eval_09,completeness,0,결론 부분이 생략됨
+content_009,eval_09,consistency,0,같은 수치를 다르게 표기함
+content_009,eval_09,clarity,0,전문 용어 설명 없이 사용됨
+content_009,eval_09,relevance,1,
+content_009,eval_09,conciseness,2,
+content_009,eval_09,tone,0,감정적 표현이 과도하게 사용됨
+content_009,eval_10,accuracy,2,
+content_009,eval_10,completeness,1,
+content_009,eval_10,consistency,2,
+content_009,eval_10,clarity,1,
+content_009,eval_10,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_009,eval_10,conciseness,2,
+content_009,eval_10,tone,2,
+content_009,eval_11,accuracy,1,
+content_009,eval_11,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_009,eval_11,consistency,2,
+content_009,eval_11,clarity,1,
+content_009,eval_11,relevance,1,
+content_009,eval_11,conciseness,1,
+content_009,eval_11,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_009,eval_12,accuracy,2,
+content_009,eval_12,completeness,2,
+content_009,eval_12,consistency,2,
+content_009,eval_12,clarity,1,
+content_009,eval_12,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_009,eval_12,conciseness,1,
+content_009,eval_12,tone,0,톤이 대상 독자에 맞지 않음
+content_010,eval_01,accuracy,2,
+content_010,eval_01,completeness,2,
+content_010,eval_01,consistency,1,
+content_010,eval_01,clarity,2,
+content_010,eval_01,relevance,2,
+content_010,eval_01,conciseness,2,
+content_010,eval_01,tone,2,
+content_010,eval_02,accuracy,2,
+content_010,eval_02,completeness,2,
+content_010,eval_02,consistency,2,
+content_010,eval_02,clarity,2,
+content_010,eval_02,relevance,1,
+content_010,eval_02,conciseness,2,
+content_010,eval_02,tone,2,
+content_010,eval_03,accuracy,2,
+content_010,eval_03,completeness,2,
+content_010,eval_03,consistency,2,
+content_010,eval_03,clarity,2,
+content_010,eval_03,relevance,2,
+content_010,eval_03,conciseness,2,
+content_010,eval_03,tone,0,감정적 표현이 과도하게 사용됨
+content_010,eval_04,accuracy,2,
+content_010,eval_04,completeness,2,
+content_010,eval_04,consistency,2,
+content_010,eval_04,clarity,2,
+content_010,eval_04,relevance,2,
+content_010,eval_04,conciseness,2,
+content_010,eval_04,tone,2,
+content_010,eval_05,accuracy,2,
+content_010,eval_05,completeness,2,
+content_010,eval_05,consistency,2,
+content_010,eval_05,clarity,2,
+content_010,eval_05,relevance,2,
+content_010,eval_05,conciseness,2,
+content_010,eval_05,tone,2,
+content_010,eval_06,accuracy,2,
+content_010,eval_06,completeness,2,
+content_010,eval_06,consistency,2,
+content_010,eval_06,clarity,2,
+content_010,eval_06,relevance,2,
+content_010,eval_06,conciseness,2,
+content_010,eval_06,tone,2,
+content_010,eval_07,accuracy,2,
+content_010,eval_07,completeness,2,
+content_010,eval_07,consistency,2,
+content_010,eval_07,clarity,1,
+content_010,eval_07,relevance,2,
+content_010,eval_07,conciseness,2,
+content_010,eval_07,tone,2,
+content_010,eval_08,accuracy,2,
+content_010,eval_08,completeness,2,
+content_010,eval_08,consistency,2,
+content_010,eval_08,clarity,2,
+content_010,eval_08,relevance,2,
+content_010,eval_08,conciseness,2,
+content_010,eval_08,tone,2,
+content_010,eval_09,accuracy,2,
+content_010,eval_09,completeness,2,
+content_010,eval_09,consistency,2,
+content_010,eval_09,clarity,2,
+content_010,eval_09,relevance,2,
+content_010,eval_09,conciseness,2,
+content_010,eval_09,tone,2,
+content_010,eval_10,accuracy,2,
+content_010,eval_10,completeness,2,
+content_010,eval_10,consistency,2,
+content_010,eval_10,clarity,1,
+content_010,eval_10,relevance,2,
+content_010,eval_10,conciseness,2,
+content_010,eval_10,tone,2,
+content_010,eval_11,accuracy,2,
+content_010,eval_11,completeness,2,
+content_010,eval_11,consistency,2,
+content_010,eval_11,clarity,2,
+content_010,eval_11,relevance,2,
+content_010,eval_11,conciseness,2,
+content_010,eval_11,tone,2,
+content_010,eval_12,accuracy,2,
+content_010,eval_12,completeness,2,
+content_010,eval_12,consistency,2,
+content_010,eval_12,clarity,2,
+content_010,eval_12,relevance,2,
+content_010,eval_12,conciseness,2,
+content_010,eval_12,tone,2,
+content_011,eval_01,accuracy,1,
+content_011,eval_01,completeness,2,
+content_011,eval_01,consistency,2,
+content_011,eval_01,clarity,2,
+content_011,eval_01,relevance,2,
+content_011,eval_01,conciseness,2,
+content_011,eval_01,tone,2,
+content_011,eval_02,accuracy,2,
+content_011,eval_02,completeness,2,
+content_011,eval_02,consistency,0,문단 간 논리 흐름이 단절됨
+content_011,eval_02,clarity,1,
+content_011,eval_02,relevance,2,
+content_011,eval_02,conciseness,2,
+content_011,eval_02,tone,2,
+content_011,eval_03,accuracy,1,
+content_011,eval_03,completeness,1,
+content_011,eval_03,consistency,1,
+content_011,eval_03,clarity,2,
+content_011,eval_03,relevance,1,
+content_011,eval_03,conciseness,1,
+content_011,eval_03,tone,2,
+content_011,eval_04,accuracy,1,
+content_011,eval_04,completeness,1,
+content_011,eval_04,consistency,2,
+content_011,eval_04,clarity,1,
+content_011,eval_04,relevance,1,
+content_011,eval_04,conciseness,2,
+content_011,eval_04,tone,2,
+content_011,eval_05,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_011,eval_05,completeness,2,
+content_011,eval_05,consistency,1,
+content_011,eval_05,clarity,1,
+content_011,eval_05,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_011,eval_05,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_011,eval_05,tone,1,
+content_011,eval_06,accuracy,2,
+content_011,eval_06,completeness,2,
+content_011,eval_06,consistency,1,
+content_011,eval_06,clarity,1,
+content_011,eval_06,relevance,2,
+content_011,eval_06,conciseness,2,
+content_011,eval_06,tone,2,
+content_011,eval_07,accuracy,2,
+content_011,eval_07,completeness,1,
+content_011,eval_07,consistency,2,
+content_011,eval_07,clarity,1,
+content_011,eval_07,relevance,2,
+content_011,eval_07,conciseness,1,
+content_011,eval_07,tone,1,
+content_011,eval_08,accuracy,1,
+content_011,eval_08,completeness,1,
+content_011,eval_08,consistency,2,
+content_011,eval_08,clarity,1,
+content_011,eval_08,relevance,2,
+content_011,eval_08,conciseness,1,
+content_011,eval_08,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_011,eval_09,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_011,eval_09,completeness,2,
+content_011,eval_09,consistency,2,
+content_011,eval_09,clarity,0,전문 용어 설명 없이 사용됨
+content_011,eval_09,relevance,1,
+content_011,eval_09,conciseness,1,
+content_011,eval_09,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_011,eval_10,accuracy,1,
+content_011,eval_10,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_011,eval_10,consistency,0,문단 간 논리 흐름이 단절됨
+content_011,eval_10,clarity,1,
+content_011,eval_10,relevance,1,
+content_011,eval_10,conciseness,2,
+content_011,eval_10,tone,1,
+content_011,eval_11,accuracy,0,검증되지 않은 내용이 단정적으로 기술됨
+content_011,eval_11,completeness,0,요청 범위의 절반만 다룸
+content_011,eval_11,consistency,2,
+content_011,eval_11,clarity,1,
+content_011,eval_11,relevance,2,
+content_011,eval_11,conciseness,0,불필요한 반복이 많음
+content_011,eval_11,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_011,eval_12,accuracy,2,
+content_011,eval_12,completeness,0,중요한 예외 사항이 언급되지 않음
+content_011,eval_12,consistency,0,초반과 후반의 주장이 상충됨
+content_011,eval_12,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_011,eval_12,relevance,1,
+content_011,eval_12,conciseness,0,불필요한 반복이 많음
+content_011,eval_12,tone,1,
+content_012,eval_01,accuracy,2,
+content_012,eval_01,completeness,1,
+content_012,eval_01,consistency,0,문단 간 논리 흐름이 단절됨
+content_012,eval_01,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_012,eval_01,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_012,eval_01,conciseness,1,
+content_012,eval_01,tone,1,
+content_012,eval_02,accuracy,2,
+content_012,eval_02,completeness,0,결론 부분이 생략됨
+content_012,eval_02,consistency,2,
+content_012,eval_02,clarity,1,
+content_012,eval_02,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_012,eval_02,conciseness,2,
+content_012,eval_02,tone,0,비격식적 표현이 부적절하게 사용됨
+content_012,eval_03,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_012,eval_03,completeness,0,중요한 예외 사항이 언급되지 않음
+content_012,eval_03,consistency,1,
+content_012,eval_03,clarity,1,
+content_012,eval_03,relevance,2,
+content_012,eval_03,conciseness,1,
+content_012,eval_03,tone,1,
+content_012,eval_04,accuracy,0,검증되지 않은 내용이 단정적으로 기술됨
+content_012,eval_04,completeness,1,
+content_012,eval_04,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_012,eval_04,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_012,eval_04,relevance,1,
+content_012,eval_04,conciseness,2,
+content_012,eval_04,tone,2,
+content_012,eval_05,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_012,eval_05,completeness,2,
+content_012,eval_05,consistency,1,
+content_012,eval_05,clarity,2,
+content_012,eval_05,relevance,1,
+content_012,eval_05,conciseness,2,
+content_012,eval_05,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_012,eval_06,accuracy,1,
+content_012,eval_06,completeness,1,
+content_012,eval_06,consistency,0,같은 수치를 다르게 표기함
+content_012,eval_06,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_012,eval_06,relevance,0,주제와 무관한 내용이 포함됨
+content_012,eval_06,conciseness,2,
+content_012,eval_06,tone,1,
+content_012,eval_07,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_012,eval_07,completeness,1,
+content_012,eval_07,consistency,1,
+content_012,eval_07,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_012,eval_07,relevance,1,
+content_012,eval_07,conciseness,2,
+content_012,eval_07,tone,2,
+content_012,eval_08,accuracy,1,
+content_012,eval_08,completeness,2,
+content_012,eval_08,consistency,0,초반과 후반의 주장이 상충됨
+content_012,eval_08,clarity,1,
+content_012,eval_08,relevance,1,
+content_012,eval_08,conciseness,1,
+content_012,eval_08,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_012,eval_09,accuracy,1,
+content_012,eval_09,completeness,2,
+content_012,eval_09,consistency,1,
+content_012,eval_09,clarity,1,
+content_012,eval_09,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_012,eval_09,conciseness,1,
+content_012,eval_09,tone,2,
+content_012,eval_10,accuracy,2,
+content_012,eval_10,completeness,2,
+content_012,eval_10,consistency,2,
+content_012,eval_10,clarity,1,
+content_012,eval_10,relevance,1,
+content_012,eval_10,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_012,eval_10,tone,2,
+content_012,eval_11,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_012,eval_11,completeness,0,중요한 예외 사항이 언급되지 않음
+content_012,eval_11,consistency,2,
+content_012,eval_11,clarity,1,
+content_012,eval_11,relevance,0,질문에 대한 직접적 답변이 아님
+content_012,eval_11,conciseness,1,
+content_012,eval_11,tone,1,
+content_012,eval_12,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_012,eval_12,completeness,2,
+content_012,eval_12,consistency,0,문단 간 논리 흐름이 단절됨
+content_012,eval_12,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_012,eval_12,relevance,1,
+content_012,eval_12,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_012,eval_12,tone,2,
+content_013,eval_01,accuracy,2,
+content_013,eval_01,completeness,2,
+content_013,eval_01,consistency,1,
+content_013,eval_01,clarity,1,
+content_013,eval_01,relevance,1,
+content_013,eval_01,conciseness,2,
+content_013,eval_01,tone,2,
+content_013,eval_02,accuracy,2,
+content_013,eval_02,completeness,2,
+content_013,eval_02,consistency,2,
+content_013,eval_02,clarity,2,
+content_013,eval_02,relevance,2,
+content_013,eval_02,conciseness,2,
+content_013,eval_02,tone,1,
+content_013,eval_03,accuracy,1,
+content_013,eval_03,completeness,1,
+content_013,eval_03,consistency,2,
+content_013,eval_03,clarity,1,
+content_013,eval_03,relevance,2,
+content_013,eval_03,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_013,eval_03,tone,2,
+content_013,eval_04,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_013,eval_04,completeness,1,
+content_013,eval_04,consistency,0,동일 개념에 다른 용어를 혼용
+content_013,eval_04,clarity,2,
+content_013,eval_04,relevance,1,
+content_013,eval_04,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_013,eval_04,tone,2,
+content_013,eval_05,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_013,eval_05,completeness,1,
+content_013,eval_05,consistency,0,문단 간 논리 흐름이 단절됨
+content_013,eval_05,clarity,2,
+content_013,eval_05,relevance,2,
+content_013,eval_05,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_013,eval_05,tone,0,비격식적 표현이 부적절하게 사용됨
+content_013,eval_06,accuracy,1,
+content_013,eval_06,completeness,0,중요한 예외 사항이 언급되지 않음
+content_013,eval_06,consistency,1,
+content_013,eval_06,clarity,1,
+content_013,eval_06,relevance,2,
+content_013,eval_06,conciseness,1,
+content_013,eval_06,tone,0,비격식적 표현이 부적절하게 사용됨
+content_013,eval_07,accuracy,2,
+content_013,eval_07,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_013,eval_07,consistency,1,
+content_013,eval_07,clarity,2,
+content_013,eval_07,relevance,1,
+content_013,eval_07,conciseness,1,
+content_013,eval_07,tone,0,감정적 표현이 과도하게 사용됨
+content_013,eval_08,accuracy,1,
+content_013,eval_08,completeness,1,
+content_013,eval_08,consistency,1,
+content_013,eval_08,clarity,1,
+content_013,eval_08,relevance,1,
+content_013,eval_08,conciseness,1,
+content_013,eval_08,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_013,eval_09,accuracy,1,
+content_013,eval_09,completeness,1,
+content_013,eval_09,consistency,0,초반과 후반의 주장이 상충됨
+content_013,eval_09,clarity,1,
+content_013,eval_09,relevance,2,
+content_013,eval_09,conciseness,1,
+content_013,eval_09,tone,0,비격식적 표현이 부적절하게 사용됨
+content_013,eval_10,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_013,eval_10,completeness,0,요청 범위의 절반만 다룸
+content_013,eval_10,consistency,2,
+content_013,eval_10,clarity,2,
+content_013,eval_10,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_013,eval_10,conciseness,1,
+content_013,eval_10,tone,2,
+content_013,eval_11,accuracy,2,
+content_013,eval_11,completeness,1,
+content_013,eval_11,consistency,2,
+content_013,eval_11,clarity,1,
+content_013,eval_11,relevance,1,
+content_013,eval_11,conciseness,1,
+content_013,eval_11,tone,2,
+content_013,eval_12,accuracy,1,
+content_013,eval_12,completeness,0,핵심 정보가 누락됨
+content_013,eval_12,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_013,eval_12,clarity,0,지시어 지칭 대상이 불명확함
+content_013,eval_12,relevance,1,
+content_013,eval_12,conciseness,1,
+content_013,eval_12,tone,0,감정적 표현이 과도하게 사용됨
+content_014,eval_01,accuracy,2,
+content_014,eval_01,completeness,1,
+content_014,eval_01,consistency,2,
+content_014,eval_01,clarity,1,
+content_014,eval_01,relevance,2,
+content_014,eval_01,conciseness,2,
+content_014,eval_01,tone,2,
+content_014,eval_02,accuracy,2,
+content_014,eval_02,completeness,2,
+content_014,eval_02,consistency,2,
+content_014,eval_02,clarity,2,
+content_014,eval_02,relevance,2,
+content_014,eval_02,conciseness,2,
+content_014,eval_02,tone,2,
+content_014,eval_03,accuracy,2,
+content_014,eval_03,completeness,1,
+content_014,eval_03,consistency,1,
+content_014,eval_03,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_014,eval_03,relevance,1,
+content_014,eval_03,conciseness,2,
+content_014,eval_03,tone,2,
+content_014,eval_04,accuracy,2,
+content_014,eval_04,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_014,eval_04,consistency,0,동일 개념에 다른 용어를 혼용
+content_014,eval_04,clarity,2,
+content_014,eval_04,relevance,2,
+content_014,eval_04,conciseness,1,
+content_014,eval_04,tone,2,
+content_014,eval_05,accuracy,1,
+content_014,eval_05,completeness,2,
+content_014,eval_05,consistency,1,
+content_014,eval_05,clarity,2,
+content_014,eval_05,relevance,2,
+content_014,eval_05,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_014,eval_05,tone,2,
+content_014,eval_06,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_014,eval_06,completeness,1,
+content_014,eval_06,consistency,1,
+content_014,eval_06,clarity,1,
+content_014,eval_06,relevance,2,
+content_014,eval_06,conciseness,2,
+content_014,eval_06,tone,2,
+content_014,eval_07,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_014,eval_07,completeness,1,
+content_014,eval_07,consistency,0,초반과 후반의 주장이 상충됨
+content_014,eval_07,clarity,1,
+content_014,eval_07,relevance,2,
+content_014,eval_07,conciseness,2,
+content_014,eval_07,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_014,eval_08,accuracy,2,
+content_014,eval_08,completeness,1,
+content_014,eval_08,consistency,1,
+content_014,eval_08,clarity,2,
+content_014,eval_08,relevance,2,
+content_014,eval_08,conciseness,2,
+content_014,eval_08,tone,2,
+content_014,eval_09,accuracy,2,
+content_014,eval_09,completeness,2,
+content_014,eval_09,consistency,1,
+content_014,eval_09,clarity,1,
+content_014,eval_09,relevance,1,
+content_014,eval_09,conciseness,1,
+content_014,eval_09,tone,1,
+content_014,eval_10,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_014,eval_10,completeness,1,
+content_014,eval_10,consistency,2,
+content_014,eval_10,clarity,0,전문 용어 설명 없이 사용됨
+content_014,eval_10,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_014,eval_10,conciseness,2,
+content_014,eval_10,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_014,eval_11,accuracy,2,
+content_014,eval_11,completeness,2,
+content_014,eval_11,consistency,0,초반과 후반의 주장이 상충됨
+content_014,eval_11,clarity,2,
+content_014,eval_11,relevance,1,
+content_014,eval_11,conciseness,1,
+content_014,eval_11,tone,0,톤이 대상 독자에 맞지 않음
+content_014,eval_12,accuracy,2,
+content_014,eval_12,completeness,2,
+content_014,eval_12,consistency,2,
+content_014,eval_12,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_014,eval_12,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_014,eval_12,conciseness,1,
+content_014,eval_12,tone,0,감정적 표현이 과도하게 사용됨
+content_015,eval_01,accuracy,2,
+content_015,eval_01,completeness,2,
+content_015,eval_01,consistency,2,
+content_015,eval_01,clarity,1,
+content_015,eval_01,relevance,1,
+content_015,eval_01,conciseness,2,
+content_015,eval_01,tone,2,
+content_015,eval_02,accuracy,2,
+content_015,eval_02,completeness,1,
+content_015,eval_02,consistency,2,
+content_015,eval_02,clarity,2,
+content_015,eval_02,relevance,2,
+content_015,eval_02,conciseness,2,
+content_015,eval_02,tone,2,
+content_015,eval_03,accuracy,1,
+content_015,eval_03,completeness,1,
+content_015,eval_03,consistency,0,동일 개념에 다른 용어를 혼용
+content_015,eval_03,clarity,2,
+content_015,eval_03,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_015,eval_03,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_015,eval_03,tone,2,
+content_015,eval_04,accuracy,1,
+content_015,eval_04,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_015,eval_04,consistency,2,
+content_015,eval_04,clarity,1,
+content_015,eval_04,relevance,2,
+content_015,eval_04,conciseness,1,
+content_015,eval_04,tone,2,
+content_015,eval_05,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_015,eval_05,completeness,0,요청 범위의 절반만 다룸
+content_015,eval_05,consistency,2,
+content_015,eval_05,clarity,2,
+content_015,eval_05,relevance,2,
+content_015,eval_05,conciseness,1,
+content_015,eval_05,tone,1,
+content_015,eval_06,accuracy,1,
+content_015,eval_06,completeness,1,
+content_015,eval_06,consistency,0,동일 개념에 다른 용어를 혼용
+content_015,eval_06,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_015,eval_06,relevance,2,
+content_015,eval_06,conciseness,1,
+content_015,eval_06,tone,2,
+content_015,eval_07,accuracy,0,수치 오류가 발견됨
+content_015,eval_07,completeness,2,
+content_015,eval_07,consistency,1,
+content_015,eval_07,clarity,2,
+content_015,eval_07,relevance,2,
+content_015,eval_07,conciseness,1,
+content_015,eval_07,tone,2,
+content_015,eval_08,accuracy,2,
+content_015,eval_08,completeness,0,요청 범위의 절반만 다룸
+content_015,eval_08,consistency,2,
+content_015,eval_08,clarity,1,
+content_015,eval_08,relevance,2,
+content_015,eval_08,conciseness,1,
+content_015,eval_08,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_015,eval_09,accuracy,1,
+content_015,eval_09,completeness,0,요청 범위의 절반만 다룸
+content_015,eval_09,consistency,1,
+content_015,eval_09,clarity,2,
+content_015,eval_09,relevance,1,
+content_015,eval_09,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_015,eval_09,tone,2,
+content_015,eval_10,accuracy,0,검증되지 않은 내용이 단정적으로 기술됨
+content_015,eval_10,completeness,1,
+content_015,eval_10,consistency,2,
+content_015,eval_10,clarity,1,
+content_015,eval_10,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_015,eval_10,conciseness,1,
+content_015,eval_10,tone,1,
+content_015,eval_11,accuracy,1,
+content_015,eval_11,completeness,0,중요한 예외 사항이 언급되지 않음
+content_015,eval_11,consistency,0,문단 간 논리 흐름이 단절됨
+content_015,eval_11,clarity,1,
+content_015,eval_11,relevance,2,
+content_015,eval_11,conciseness,1,
+content_015,eval_11,tone,0,감정적 표현이 과도하게 사용됨
+content_015,eval_12,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_015,eval_12,completeness,2,
+content_015,eval_12,consistency,0,앞뒤 문맥이 모순됨
+content_015,eval_12,clarity,1,
+content_015,eval_12,relevance,0,질문에 대한 직접적 답변이 아님
+content_015,eval_12,conciseness,1,
+content_015,eval_12,tone,1,
+content_016,eval_01,accuracy,2,
+content_016,eval_01,completeness,2,
+content_016,eval_01,consistency,2,
+content_016,eval_01,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_016,eval_01,relevance,2,
+content_016,eval_01,conciseness,2,
+content_016,eval_01,tone,2,
+content_016,eval_02,accuracy,2,
+content_016,eval_02,completeness,2,
+content_016,eval_02,consistency,2,
+content_016,eval_02,clarity,1,
+content_016,eval_02,relevance,1,
+content_016,eval_02,conciseness,2,
+content_016,eval_02,tone,2,
+content_016,eval_03,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_016,eval_03,completeness,0,요청 범위의 절반만 다룸
+content_016,eval_03,consistency,2,
+content_016,eval_03,clarity,1,
+content_016,eval_03,relevance,1,
+content_016,eval_03,conciseness,1,
+content_016,eval_03,tone,2,
+content_016,eval_04,accuracy,1,
+content_016,eval_04,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_016,eval_04,consistency,0,초반과 후반의 주장이 상충됨
+content_016,eval_04,clarity,2,
+content_016,eval_04,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_016,eval_04,conciseness,1,
+content_016,eval_04,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_016,eval_05,accuracy,1,
+content_016,eval_05,completeness,1,
+content_016,eval_05,consistency,1,
+content_016,eval_05,clarity,2,
+content_016,eval_05,relevance,1,
+content_016,eval_05,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_016,eval_05,tone,1,
+content_016,eval_06,accuracy,2,
+content_016,eval_06,completeness,1,
+content_016,eval_06,consistency,2,
+content_016,eval_06,clarity,2,
+content_016,eval_06,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_016,eval_06,conciseness,2,
+content_016,eval_06,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_016,eval_07,accuracy,1,
+content_016,eval_07,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_016,eval_07,consistency,1,
+content_016,eval_07,clarity,1,
+content_016,eval_07,relevance,2,
+content_016,eval_07,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_016,eval_07,tone,1,
+content_016,eval_08,accuracy,0,수치 오류가 발견됨
+content_016,eval_08,completeness,1,
+content_016,eval_08,consistency,1,
+content_016,eval_08,clarity,1,
+content_016,eval_08,relevance,2,
+content_016,eval_08,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_016,eval_08,tone,2,
+content_016,eval_09,accuracy,1,
+content_016,eval_09,completeness,2,
+content_016,eval_09,consistency,2,
+content_016,eval_09,clarity,2,
+content_016,eval_09,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_016,eval_09,conciseness,2,
+content_016,eval_09,tone,1,
+content_016,eval_10,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_016,eval_10,completeness,2,
+content_016,eval_10,consistency,1,
+content_016,eval_10,clarity,1,
+content_016,eval_10,relevance,1,
+content_016,eval_10,conciseness,1,
+content_016,eval_10,tone,2,
+content_016,eval_11,accuracy,2,
+content_016,eval_11,completeness,1,
+content_016,eval_11,consistency,2,
+content_016,eval_11,clarity,1,
+content_016,eval_11,relevance,1,
+content_016,eval_11,conciseness,1,
+content_016,eval_11,tone,1,
+content_016,eval_12,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_016,eval_12,completeness,0,요청 범위의 절반만 다룸
+content_016,eval_12,consistency,1,
+content_016,eval_12,clarity,1,
+content_016,eval_12,relevance,1,
+content_016,eval_12,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_016,eval_12,tone,1,
+content_017,eval_01,accuracy,1,
+content_017,eval_01,completeness,2,
+content_017,eval_01,consistency,2,
+content_017,eval_01,clarity,2,
+content_017,eval_01,relevance,1,
+content_017,eval_01,conciseness,1,
+content_017,eval_01,tone,1,
+content_017,eval_02,accuracy,1,
+content_017,eval_02,completeness,2,
+content_017,eval_02,consistency,2,
+content_017,eval_02,clarity,2,
+content_017,eval_02,relevance,2,
+content_017,eval_02,conciseness,2,
+content_017,eval_02,tone,2,
+content_017,eval_03,accuracy,2,
+content_017,eval_03,completeness,1,
+content_017,eval_03,consistency,1,
+content_017,eval_03,clarity,1,
+content_017,eval_03,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_017,eval_03,conciseness,2,
+content_017,eval_03,tone,2,
+content_017,eval_04,accuracy,2,
+content_017,eval_04,completeness,1,
+content_017,eval_04,consistency,0,동일 개념에 다른 용어를 혼용
+content_017,eval_04,clarity,2,
+content_017,eval_04,relevance,1,
+content_017,eval_04,conciseness,1,
+content_017,eval_04,tone,1,
+content_017,eval_05,accuracy,1,
+content_017,eval_05,completeness,1,
+content_017,eval_05,consistency,2,
+content_017,eval_05,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_017,eval_05,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_017,eval_05,conciseness,2,
+content_017,eval_05,tone,2,
+content_017,eval_06,accuracy,1,
+content_017,eval_06,completeness,2,
+content_017,eval_06,consistency,2,
+content_017,eval_06,clarity,0,지시어 지칭 대상이 불명확함
+content_017,eval_06,relevance,1,
+content_017,eval_06,conciseness,1,
+content_017,eval_06,tone,2,
+content_017,eval_07,accuracy,1,
+content_017,eval_07,completeness,2,
+content_017,eval_07,consistency,2,
+content_017,eval_07,clarity,1,
+content_017,eval_07,relevance,0,질문에 대한 직접적 답변이 아님
+content_017,eval_07,conciseness,1,
+content_017,eval_07,tone,2,
+content_017,eval_08,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_017,eval_08,completeness,1,
+content_017,eval_08,consistency,1,
+content_017,eval_08,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_017,eval_08,relevance,1,
+content_017,eval_08,conciseness,2,
+content_017,eval_08,tone,1,
+content_017,eval_09,accuracy,1,
+content_017,eval_09,completeness,0,요청 범위의 절반만 다룸
+content_017,eval_09,consistency,2,
+content_017,eval_09,clarity,1,
+content_017,eval_09,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_017,eval_09,conciseness,1,
+content_017,eval_09,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_017,eval_10,accuracy,0,검증되지 않은 내용이 단정적으로 기술됨
+content_017,eval_10,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_017,eval_10,consistency,2,
+content_017,eval_10,clarity,2,
+content_017,eval_10,relevance,1,
+content_017,eval_10,conciseness,2,
+content_017,eval_10,tone,0,비격식적 표현이 부적절하게 사용됨
+content_017,eval_11,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_017,eval_11,completeness,2,
+content_017,eval_11,consistency,0,동일 개념에 다른 용어를 혼용
+content_017,eval_11,clarity,2,
+content_017,eval_11,relevance,1,
+content_017,eval_11,conciseness,1,
+content_017,eval_11,tone,1,
+content_017,eval_12,accuracy,1,
+content_017,eval_12,completeness,0,중요한 예외 사항이 언급되지 않음
+content_017,eval_12,consistency,1,
+content_017,eval_12,clarity,2,
+content_017,eval_12,relevance,1,
+content_017,eval_12,conciseness,0,불필요한 반복이 많음
+content_017,eval_12,tone,1,
+content_018,eval_01,accuracy,1,
+content_018,eval_01,completeness,2,
+content_018,eval_01,consistency,2,
+content_018,eval_01,clarity,2,
+content_018,eval_01,relevance,1,
+content_018,eval_01,conciseness,2,
+content_018,eval_01,tone,2,
+content_018,eval_02,accuracy,2,
+content_018,eval_02,completeness,2,
+content_018,eval_02,consistency,2,
+content_018,eval_02,clarity,2,
+content_018,eval_02,relevance,2,
+content_018,eval_02,conciseness,1,
+content_018,eval_02,tone,2,
+content_018,eval_03,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_018,eval_03,completeness,1,
+content_018,eval_03,consistency,0,초반과 후반의 주장이 상충됨
+content_018,eval_03,clarity,2,
+content_018,eval_03,relevance,2,
+content_018,eval_03,conciseness,1,
+content_018,eval_03,tone,2,
+content_018,eval_04,accuracy,2,
+content_018,eval_04,completeness,2,
+content_018,eval_04,consistency,2,
+content_018,eval_04,clarity,2,
+content_018,eval_04,relevance,0,질문에 대한 직접적 답변이 아님
+content_018,eval_04,conciseness,1,
+content_018,eval_04,tone,1,
+content_018,eval_05,accuracy,1,
+content_018,eval_05,completeness,1,
+content_018,eval_05,consistency,0,같은 수치를 다르게 표기함
+content_018,eval_05,clarity,1,
+content_018,eval_05,relevance,2,
+content_018,eval_05,conciseness,1,
+content_018,eval_05,tone,1,
+content_018,eval_06,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_018,eval_06,completeness,1,
+content_018,eval_06,consistency,2,
+content_018,eval_06,clarity,2,
+content_018,eval_06,relevance,1,
+content_018,eval_06,conciseness,0,불필요한 반복이 많음
+content_018,eval_06,tone,1,
+content_018,eval_07,accuracy,2,
+content_018,eval_07,completeness,2,
+content_018,eval_07,consistency,2,
+content_018,eval_07,clarity,1,
+content_018,eval_07,relevance,1,
+content_018,eval_07,conciseness,1,
+content_018,eval_07,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_018,eval_08,accuracy,1,
+content_018,eval_08,completeness,1,
+content_018,eval_08,consistency,1,
+content_018,eval_08,clarity,1,
+content_018,eval_08,relevance,2,
+content_018,eval_08,conciseness,1,
+content_018,eval_08,tone,2,
+content_018,eval_09,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_018,eval_09,completeness,1,
+content_018,eval_09,consistency,2,
+content_018,eval_09,clarity,1,
+content_018,eval_09,relevance,2,
+content_018,eval_09,conciseness,2,
+content_018,eval_09,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_018,eval_10,accuracy,1,
+content_018,eval_10,completeness,0,핵심 정보가 누락됨
+content_018,eval_10,consistency,0,초반과 후반의 주장이 상충됨
+content_018,eval_10,clarity,2,
+content_018,eval_10,relevance,1,
+content_018,eval_10,conciseness,0,서론이 너무 길어 본론에 도달하기까지 시간이 걸림
+content_018,eval_10,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_018,eval_11,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_018,eval_11,completeness,2,
+content_018,eval_11,consistency,2,
+content_018,eval_11,clarity,0,지시어 지칭 대상이 불명확함
+content_018,eval_11,relevance,1,
+content_018,eval_11,conciseness,1,
+content_018,eval_11,tone,1,
+content_018,eval_12,accuracy,1,
+content_018,eval_12,completeness,1,
+content_018,eval_12,consistency,0,초반과 후반의 주장이 상충됨
+content_018,eval_12,clarity,1,
+content_018,eval_12,relevance,2,
+content_018,eval_12,conciseness,1,
+content_018,eval_12,tone,2,
+content_019,eval_01,accuracy,2,
+content_019,eval_01,completeness,2,
+content_019,eval_01,consistency,0,같은 수치를 다르게 표기함
+content_019,eval_01,clarity,2,
+content_019,eval_01,relevance,2,
+content_019,eval_01,conciseness,2,
+content_019,eval_01,tone,2,
+content_019,eval_02,accuracy,1,
+content_019,eval_02,completeness,1,
+content_019,eval_02,consistency,2,
+content_019,eval_02,clarity,2,
+content_019,eval_02,relevance,2,
+content_019,eval_02,conciseness,2,
+content_019,eval_02,tone,2,
+content_019,eval_03,accuracy,2,
+content_019,eval_03,completeness,1,
+content_019,eval_03,consistency,1,
+content_019,eval_03,clarity,2,
+content_019,eval_03,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_019,eval_03,conciseness,1,
+content_019,eval_03,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_019,eval_04,accuracy,1,
+content_019,eval_04,completeness,1,
+content_019,eval_04,consistency,2,
+content_019,eval_04,clarity,1,
+content_019,eval_04,relevance,2,
+content_019,eval_04,conciseness,2,
+content_019,eval_04,tone,2,
+content_019,eval_05,accuracy,1,
+content_019,eval_05,completeness,1,
+content_019,eval_05,consistency,2,
+content_019,eval_05,clarity,1,
+content_019,eval_05,relevance,1,
+content_019,eval_05,conciseness,2,
+content_019,eval_05,tone,1,
+content_019,eval_06,accuracy,1,
+content_019,eval_06,completeness,1,
+content_019,eval_06,consistency,2,
+content_019,eval_06,clarity,2,
+content_019,eval_06,relevance,2,
+content_019,eval_06,conciseness,2,
+content_019,eval_06,tone,0,감정적 표현이 과도하게 사용됨
+content_019,eval_07,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_019,eval_07,completeness,1,
+content_019,eval_07,consistency,1,
+content_019,eval_07,clarity,2,
+content_019,eval_07,relevance,2,
+content_019,eval_07,conciseness,2,
+content_019,eval_07,tone,2,
+content_019,eval_08,accuracy,2,
+content_019,eval_08,completeness,1,
+content_019,eval_08,consistency,1,
+content_019,eval_08,clarity,1,
+content_019,eval_08,relevance,2,
+content_019,eval_08,conciseness,2,
+content_019,eval_08,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_019,eval_09,accuracy,2,
+content_019,eval_09,completeness,1,
+content_019,eval_09,consistency,2,
+content_019,eval_09,clarity,2,
+content_019,eval_09,relevance,2,
+content_019,eval_09,conciseness,2,
+content_019,eval_09,tone,1,
+content_019,eval_10,accuracy,1,
+content_019,eval_10,completeness,2,
+content_019,eval_10,consistency,1,
+content_019,eval_10,clarity,1,
+content_019,eval_10,relevance,1,
+content_019,eval_10,conciseness,1,
+content_019,eval_10,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_019,eval_11,accuracy,0,검증되지 않은 내용이 단정적으로 기술됨
+content_019,eval_11,completeness,1,
+content_019,eval_11,consistency,0,문단 간 논리 흐름이 단절됨
+content_019,eval_11,clarity,1,
+content_019,eval_11,relevance,0,주제와 무관한 내용이 포함됨
+content_019,eval_11,conciseness,1,
+content_019,eval_11,tone,1,
+content_019,eval_12,accuracy,1,
+content_019,eval_12,completeness,0,결론 부분이 생략됨
+content_019,eval_12,consistency,0,같은 수치를 다르게 표기함
+content_019,eval_12,clarity,0,전문 용어 설명 없이 사용됨
+content_019,eval_12,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_019,eval_12,conciseness,2,
+content_019,eval_12,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_020,eval_01,accuracy,2,
+content_020,eval_01,completeness,2,
+content_020,eval_01,consistency,2,
+content_020,eval_01,clarity,2,
+content_020,eval_01,relevance,2,
+content_020,eval_01,conciseness,2,
+content_020,eval_01,tone,2,
+content_020,eval_02,accuracy,2,
+content_020,eval_02,completeness,1,
+content_020,eval_02,consistency,2,
+content_020,eval_02,clarity,2,
+content_020,eval_02,relevance,2,
+content_020,eval_02,conciseness,2,
+content_020,eval_02,tone,2,
+content_020,eval_03,accuracy,2,
+content_020,eval_03,completeness,2,
+content_020,eval_03,consistency,2,
+content_020,eval_03,clarity,2,
+content_020,eval_03,relevance,2,
+content_020,eval_03,conciseness,2,
+content_020,eval_03,tone,2,
+content_020,eval_04,accuracy,2,
+content_020,eval_04,completeness,2,
+content_020,eval_04,consistency,2,
+content_020,eval_04,clarity,2,
+content_020,eval_04,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_020,eval_04,conciseness,2,
+content_020,eval_04,tone,2,
+content_020,eval_05,accuracy,2,
+content_020,eval_05,completeness,2,
+content_020,eval_05,consistency,2,
+content_020,eval_05,clarity,2,
+content_020,eval_05,relevance,2,
+content_020,eval_05,conciseness,2,
+content_020,eval_05,tone,2,
+content_020,eval_06,accuracy,2,
+content_020,eval_06,completeness,2,
+content_020,eval_06,consistency,2,
+content_020,eval_06,clarity,2,
+content_020,eval_06,relevance,2,
+content_020,eval_06,conciseness,2,
+content_020,eval_06,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_020,eval_07,accuracy,2,
+content_020,eval_07,completeness,2,
+content_020,eval_07,consistency,2,
+content_020,eval_07,clarity,2,
+content_020,eval_07,relevance,2,
+content_020,eval_07,conciseness,2,
+content_020,eval_07,tone,2,
+content_020,eval_08,accuracy,2,
+content_020,eval_08,completeness,1,
+content_020,eval_08,consistency,2,
+content_020,eval_08,clarity,2,
+content_020,eval_08,relevance,2,
+content_020,eval_08,conciseness,2,
+content_020,eval_08,tone,2,
+content_020,eval_09,accuracy,2,
+content_020,eval_09,completeness,2,
+content_020,eval_09,consistency,2,
+content_020,eval_09,clarity,2,
+content_020,eval_09,relevance,2,
+content_020,eval_09,conciseness,2,
+content_020,eval_09,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_020,eval_10,accuracy,2,
+content_020,eval_10,completeness,2,
+content_020,eval_10,consistency,2,
+content_020,eval_10,clarity,2,
+content_020,eval_10,relevance,2,
+content_020,eval_10,conciseness,2,
+content_020,eval_10,tone,2,
+content_020,eval_11,accuracy,2,
+content_020,eval_11,completeness,2,
+content_020,eval_11,consistency,2,
+content_020,eval_11,clarity,2,
+content_020,eval_11,relevance,2,
+content_020,eval_11,conciseness,2,
+content_020,eval_11,tone,2,
+content_020,eval_12,accuracy,2,
+content_020,eval_12,completeness,2,
+content_020,eval_12,consistency,2,
+content_020,eval_12,clarity,2,
+content_020,eval_12,relevance,2,
+content_020,eval_12,conciseness,2,
+content_020,eval_12,tone,2,
+content_021,eval_01,accuracy,2,
+content_021,eval_01,completeness,2,
+content_021,eval_01,consistency,2,
+content_021,eval_01,clarity,2,
+content_021,eval_01,relevance,2,
+content_021,eval_01,conciseness,2,
+content_021,eval_01,tone,2,
+content_021,eval_02,accuracy,2,
+content_021,eval_02,completeness,2,
+content_021,eval_02,consistency,2,
+content_021,eval_02,clarity,2,
+content_021,eval_02,relevance,1,
+content_021,eval_02,conciseness,2,
+content_021,eval_02,tone,2,
+content_021,eval_03,accuracy,1,
+content_021,eval_03,completeness,1,
+content_021,eval_03,consistency,0,문단 간 논리 흐름이 단절됨
+content_021,eval_03,clarity,1,
+content_021,eval_03,relevance,2,
+content_021,eval_03,conciseness,2,
+content_021,eval_03,tone,1,
+content_021,eval_04,accuracy,2,
+content_021,eval_04,completeness,1,
+content_021,eval_04,consistency,0,동일 개념에 다른 용어를 혼용
+content_021,eval_04,clarity,1,
+content_021,eval_04,relevance,1,
+content_021,eval_04,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_021,eval_04,tone,2,
+content_021,eval_05,accuracy,1,
+content_021,eval_05,completeness,0,중요한 예외 사항이 언급되지 않음
+content_021,eval_05,consistency,2,
+content_021,eval_05,clarity,2,
+content_021,eval_05,relevance,1,
+content_021,eval_05,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_021,eval_05,tone,2,
+content_021,eval_06,accuracy,1,
+content_021,eval_06,completeness,0,핵심 정보가 누락됨
+content_021,eval_06,consistency,2,
+content_021,eval_06,clarity,1,
+content_021,eval_06,relevance,1,
+content_021,eval_06,conciseness,0,핵심 대비 분량이 과도함
+content_021,eval_06,tone,2,
+content_021,eval_07,accuracy,2,
+content_021,eval_07,completeness,1,
+content_021,eval_07,consistency,1,
+content_021,eval_07,clarity,2,
+content_021,eval_07,relevance,1,
+content_021,eval_07,conciseness,2,
+content_021,eval_07,tone,2,
+content_021,eval_08,accuracy,1,
+content_021,eval_08,completeness,2,
+content_021,eval_08,consistency,2,
+content_021,eval_08,clarity,1,
+content_021,eval_08,relevance,2,
+content_021,eval_08,conciseness,1,
+content_021,eval_08,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_021,eval_09,accuracy,1,
+content_021,eval_09,completeness,0,요청 범위의 절반만 다룸
+content_021,eval_09,consistency,2,
+content_021,eval_09,clarity,2,
+content_021,eval_09,relevance,2,
+content_021,eval_09,conciseness,1,
+content_021,eval_09,tone,2,
+content_021,eval_10,accuracy,1,
+content_021,eval_10,completeness,1,
+content_021,eval_10,consistency,0,같은 수치를 다르게 표기함
+content_021,eval_10,clarity,1,
+content_021,eval_10,relevance,1,
+content_021,eval_10,conciseness,2,
+content_021,eval_10,tone,2,
+content_021,eval_11,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_021,eval_11,completeness,1,
+content_021,eval_11,consistency,2,
+content_021,eval_11,clarity,2,
+content_021,eval_11,relevance,0,질문에 대한 직접적 답변이 아님
+content_021,eval_11,conciseness,0,서론이 너무 길어 본론에 도달하기까지 시간이 걸림
+content_021,eval_11,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_021,eval_12,accuracy,1,
+content_021,eval_12,completeness,2,
+content_021,eval_12,consistency,0,앞뒤 문맥이 모순됨
+content_021,eval_12,clarity,1,
+content_021,eval_12,relevance,0,질문에 대한 직접적 답변이 아님
+content_021,eval_12,conciseness,2,
+content_021,eval_12,tone,2,
+content_022,eval_01,accuracy,1,
+content_022,eval_01,completeness,2,
+content_022,eval_01,consistency,2,
+content_022,eval_01,clarity,2,
+content_022,eval_01,relevance,2,
+content_022,eval_01,conciseness,2,
+content_022,eval_01,tone,2,
+content_022,eval_02,accuracy,2,
+content_022,eval_02,completeness,1,
+content_022,eval_02,consistency,2,
+content_022,eval_02,clarity,2,
+content_022,eval_02,relevance,2,
+content_022,eval_02,conciseness,2,
+content_022,eval_02,tone,2,
+content_022,eval_03,accuracy,1,
+content_022,eval_03,completeness,1,
+content_022,eval_03,consistency,2,
+content_022,eval_03,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_022,eval_03,relevance,1,
+content_022,eval_03,conciseness,1,
+content_022,eval_03,tone,2,
+content_022,eval_04,accuracy,2,
+content_022,eval_04,completeness,2,
+content_022,eval_04,consistency,2,
+content_022,eval_04,clarity,1,
+content_022,eval_04,relevance,1,
+content_022,eval_04,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_022,eval_04,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_022,eval_05,accuracy,1,
+content_022,eval_05,completeness,2,
+content_022,eval_05,consistency,1,
+content_022,eval_05,clarity,2,
+content_022,eval_05,relevance,2,
+content_022,eval_05,conciseness,2,
+content_022,eval_05,tone,1,
+content_022,eval_06,accuracy,2,
+content_022,eval_06,completeness,1,
+content_022,eval_06,consistency,0,동일 개념에 다른 용어를 혼용
+content_022,eval_06,clarity,1,
+content_022,eval_06,relevance,1,
+content_022,eval_06,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_022,eval_06,tone,2,
+content_022,eval_07,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_022,eval_07,completeness,2,
+content_022,eval_07,consistency,0,같은 수치를 다르게 표기함
+content_022,eval_07,clarity,2,
+content_022,eval_07,relevance,1,
+content_022,eval_07,conciseness,2,
+content_022,eval_07,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_022,eval_08,accuracy,2,
+content_022,eval_08,completeness,1,
+content_022,eval_08,consistency,1,
+content_022,eval_08,clarity,2,
+content_022,eval_08,relevance,1,
+content_022,eval_08,conciseness,2,
+content_022,eval_08,tone,0,톤이 대상 독자에 맞지 않음
+content_022,eval_09,accuracy,2,
+content_022,eval_09,completeness,0,결론 부분이 생략됨
+content_022,eval_09,consistency,2,
+content_022,eval_09,clarity,2,
+content_022,eval_09,relevance,2,
+content_022,eval_09,conciseness,1,
+content_022,eval_09,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_022,eval_10,accuracy,2,
+content_022,eval_10,completeness,1,
+content_022,eval_10,consistency,1,
+content_022,eval_10,clarity,1,
+content_022,eval_10,relevance,1,
+content_022,eval_10,conciseness,1,
+content_022,eval_10,tone,1,
+content_022,eval_11,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_022,eval_11,completeness,1,
+content_022,eval_11,consistency,2,
+content_022,eval_11,clarity,2,
+content_022,eval_11,relevance,1,
+content_022,eval_11,conciseness,1,
+content_022,eval_11,tone,1,
+content_022,eval_12,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_022,eval_12,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_022,eval_12,consistency,2,
+content_022,eval_12,clarity,1,
+content_022,eval_12,relevance,1,
+content_022,eval_12,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_022,eval_12,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_023,eval_01,accuracy,2,
+content_023,eval_01,completeness,1,
+content_023,eval_01,consistency,1,
+content_023,eval_01,clarity,2,
+content_023,eval_01,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_023,eval_01,conciseness,2,
+content_023,eval_01,tone,1,
+content_023,eval_02,accuracy,1,
+content_023,eval_02,completeness,0,중요한 예외 사항이 언급되지 않음
+content_023,eval_02,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_023,eval_02,clarity,1,
+content_023,eval_02,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_023,eval_02,conciseness,2,
+content_023,eval_02,tone,2,
+content_023,eval_03,accuracy,1,
+content_023,eval_03,completeness,2,
+content_023,eval_03,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_023,eval_03,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_023,eval_03,relevance,1,
+content_023,eval_03,conciseness,2,
+content_023,eval_03,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_023,eval_04,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_023,eval_04,completeness,1,
+content_023,eval_04,consistency,1,
+content_023,eval_04,clarity,1,
+content_023,eval_04,relevance,1,
+content_023,eval_04,conciseness,1,
+content_023,eval_04,tone,1,
+content_023,eval_05,accuracy,1,
+content_023,eval_05,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_023,eval_05,consistency,1,
+content_023,eval_05,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_023,eval_05,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_023,eval_05,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_023,eval_05,tone,2,
+content_023,eval_06,accuracy,2,
+content_023,eval_06,completeness,2,
+content_023,eval_06,consistency,0,앞뒤 문맥이 모순됨
+content_023,eval_06,clarity,1,
+content_023,eval_06,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_023,eval_06,conciseness,1,
+content_023,eval_06,tone,2,
+content_023,eval_07,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_023,eval_07,completeness,0,결론 부분이 생략됨
+content_023,eval_07,consistency,1,
+content_023,eval_07,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_023,eval_07,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_023,eval_07,conciseness,2,
+content_023,eval_07,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_023,eval_08,accuracy,2,
+content_023,eval_08,completeness,0,결론 부분이 생략됨
+content_023,eval_08,consistency,1,
+content_023,eval_08,clarity,1,
+content_023,eval_08,relevance,1,
+content_023,eval_08,conciseness,2,
+content_023,eval_08,tone,0,감정적 표현이 과도하게 사용됨
+content_023,eval_09,accuracy,1,
+content_023,eval_09,completeness,1,
+content_023,eval_09,consistency,2,
+content_023,eval_09,clarity,2,
+content_023,eval_09,relevance,2,
+content_023,eval_09,conciseness,2,
+content_023,eval_09,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_023,eval_10,accuracy,2,
+content_023,eval_10,completeness,1,
+content_023,eval_10,consistency,0,앞뒤 문맥이 모순됨
+content_023,eval_10,clarity,2,
+content_023,eval_10,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_023,eval_10,conciseness,1,
+content_023,eval_10,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_023,eval_11,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_023,eval_11,completeness,1,
+content_023,eval_11,consistency,2,
+content_023,eval_11,clarity,2,
+content_023,eval_11,relevance,1,
+content_023,eval_11,conciseness,0,핵심 대비 분량이 과도함
+content_023,eval_11,tone,1,
+content_023,eval_12,accuracy,1,
+content_023,eval_12,completeness,2,
+content_023,eval_12,consistency,2,
+content_023,eval_12,clarity,1,
+content_023,eval_12,relevance,1,
+content_023,eval_12,conciseness,2,
+content_023,eval_12,tone,2,
+content_024,eval_01,accuracy,2,
+content_024,eval_01,completeness,1,
+content_024,eval_01,consistency,2,
+content_024,eval_01,clarity,2,
+content_024,eval_01,relevance,1,
+content_024,eval_01,conciseness,1,
+content_024,eval_01,tone,1,
+content_024,eval_02,accuracy,2,
+content_024,eval_02,completeness,2,
+content_024,eval_02,consistency,2,
+content_024,eval_02,clarity,2,
+content_024,eval_02,relevance,2,
+content_024,eval_02,conciseness,2,
+content_024,eval_02,tone,2,
+content_024,eval_03,accuracy,1,
+content_024,eval_03,completeness,1,
+content_024,eval_03,consistency,1,
+content_024,eval_03,clarity,1,
+content_024,eval_03,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_024,eval_03,conciseness,2,
+content_024,eval_03,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_024,eval_04,accuracy,1,
+content_024,eval_04,completeness,1,
+content_024,eval_04,consistency,0,초반과 후반의 주장이 상충됨
+content_024,eval_04,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_024,eval_04,relevance,2,
+content_024,eval_04,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_024,eval_04,tone,1,
+content_024,eval_05,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_024,eval_05,completeness,2,
+content_024,eval_05,consistency,1,
+content_024,eval_05,clarity,2,
+content_024,eval_05,relevance,0,주제와 무관한 내용이 포함됨
+content_024,eval_05,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_024,eval_05,tone,1,
+content_024,eval_06,accuracy,1,
+content_024,eval_06,completeness,0,핵심 정보가 누락됨
+content_024,eval_06,consistency,1,
+content_024,eval_06,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_024,eval_06,relevance,2,
+content_024,eval_06,conciseness,2,
+content_024,eval_06,tone,0,감정적 표현이 과도하게 사용됨
+content_024,eval_07,accuracy,1,
+content_024,eval_07,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_024,eval_07,consistency,2,
+content_024,eval_07,clarity,2,
+content_024,eval_07,relevance,1,
+content_024,eval_07,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_024,eval_07,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_024,eval_08,accuracy,1,
+content_024,eval_08,completeness,1,
+content_024,eval_08,consistency,0,같은 수치를 다르게 표기함
+content_024,eval_08,clarity,1,
+content_024,eval_08,relevance,1,
+content_024,eval_08,conciseness,2,
+content_024,eval_08,tone,1,
+content_024,eval_09,accuracy,2,
+content_024,eval_09,completeness,2,
+content_024,eval_09,consistency,1,
+content_024,eval_09,clarity,1,
+content_024,eval_09,relevance,1,
+content_024,eval_09,conciseness,0,불필요한 반복이 많음
+content_024,eval_09,tone,2,
+content_024,eval_10,accuracy,1,
+content_024,eval_10,completeness,1,
+content_024,eval_10,consistency,2,
+content_024,eval_10,clarity,1,
+content_024,eval_10,relevance,1,
+content_024,eval_10,conciseness,2,
+content_024,eval_10,tone,2,
+content_024,eval_11,accuracy,2,
+content_024,eval_11,completeness,0,중요한 예외 사항이 언급되지 않음
+content_024,eval_11,consistency,1,
+content_024,eval_11,clarity,1,
+content_024,eval_11,relevance,1,
+content_024,eval_11,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_024,eval_11,tone,2,
+content_024,eval_12,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_024,eval_12,completeness,1,
+content_024,eval_12,consistency,2,
+content_024,eval_12,clarity,2,
+content_024,eval_12,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_024,eval_12,conciseness,2,
+content_024,eval_12,tone,0,비격식적 표현이 부적절하게 사용됨
+content_025,eval_01,accuracy,2,
+content_025,eval_01,completeness,1,
+content_025,eval_01,consistency,2,
+content_025,eval_01,clarity,1,
+content_025,eval_01,relevance,2,
+content_025,eval_01,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_025,eval_01,tone,2,
+content_025,eval_02,accuracy,2,
+content_025,eval_02,completeness,2,
+content_025,eval_02,consistency,2,
+content_025,eval_02,clarity,2,
+content_025,eval_02,relevance,2,
+content_025,eval_02,conciseness,2,
+content_025,eval_02,tone,2,
+content_025,eval_03,accuracy,1,
+content_025,eval_03,completeness,1,
+content_025,eval_03,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_025,eval_03,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_025,eval_03,relevance,2,
+content_025,eval_03,conciseness,0,서론이 너무 길어 본론에 도달하기까지 시간이 걸림
+content_025,eval_03,tone,1,
+content_025,eval_04,accuracy,1,
+content_025,eval_04,completeness,1,
+content_025,eval_04,consistency,2,
+content_025,eval_04,clarity,2,
+content_025,eval_04,relevance,1,
+content_025,eval_04,conciseness,2,
+content_025,eval_04,tone,1,
+content_025,eval_05,accuracy,2,
+content_025,eval_05,completeness,1,
+content_025,eval_05,consistency,2,
+content_025,eval_05,clarity,0,전문 용어 설명 없이 사용됨
+content_025,eval_05,relevance,2,
+content_025,eval_05,conciseness,1,
+content_025,eval_05,tone,2,
+content_025,eval_06,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_025,eval_06,completeness,2,
+content_025,eval_06,consistency,1,
+content_025,eval_06,clarity,2,
+content_025,eval_06,relevance,2,
+content_025,eval_06,conciseness,1,
+content_025,eval_06,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_025,eval_07,accuracy,1,
+content_025,eval_07,completeness,2,
+content_025,eval_07,consistency,1,
+content_025,eval_07,clarity,2,
+content_025,eval_07,relevance,1,
+content_025,eval_07,conciseness,1,
+content_025,eval_07,tone,1,
+content_025,eval_08,accuracy,2,
+content_025,eval_08,completeness,2,
+content_025,eval_08,consistency,0,앞뒤 문맥이 모순됨
+content_025,eval_08,clarity,1,
+content_025,eval_08,relevance,1,
+content_025,eval_08,conciseness,2,
+content_025,eval_08,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_025,eval_09,accuracy,0,수치 오류가 발견됨
+content_025,eval_09,completeness,1,
+content_025,eval_09,consistency,2,
+content_025,eval_09,clarity,1,
+content_025,eval_09,relevance,1,
+content_025,eval_09,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_025,eval_09,tone,2,
+content_025,eval_10,accuracy,1,
+content_025,eval_10,completeness,1,
+content_025,eval_10,consistency,2,
+content_025,eval_10,clarity,0,지시어 지칭 대상이 불명확함
+content_025,eval_10,relevance,1,
+content_025,eval_10,conciseness,2,
+content_025,eval_10,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_025,eval_11,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_025,eval_11,completeness,1,
+content_025,eval_11,consistency,0,같은 수치를 다르게 표기함
+content_025,eval_11,clarity,2,
+content_025,eval_11,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_025,eval_11,conciseness,1,
+content_025,eval_11,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_025,eval_12,accuracy,1,
+content_025,eval_12,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_025,eval_12,consistency,2,
+content_025,eval_12,clarity,1,
+content_025,eval_12,relevance,1,
+content_025,eval_12,conciseness,0,핵심 대비 분량이 과도함
+content_025,eval_12,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_026,eval_01,accuracy,2,
+content_026,eval_01,completeness,1,
+content_026,eval_01,consistency,1,
+content_026,eval_01,clarity,2,
+content_026,eval_01,relevance,1,
+content_026,eval_01,conciseness,2,
+content_026,eval_01,tone,2,
+content_026,eval_02,accuracy,2,
+content_026,eval_02,completeness,2,
+content_026,eval_02,consistency,2,
+content_026,eval_02,clarity,2,
+content_026,eval_02,relevance,2,
+content_026,eval_02,conciseness,2,
+content_026,eval_02,tone,2,
+content_026,eval_03,accuracy,1,
+content_026,eval_03,completeness,2,
+content_026,eval_03,consistency,2,
+content_026,eval_03,clarity,2,
+content_026,eval_03,relevance,2,
+content_026,eval_03,conciseness,1,
+content_026,eval_03,tone,2,
+content_026,eval_04,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_026,eval_04,completeness,1,
+content_026,eval_04,consistency,0,앞뒤 문맥이 모순됨
+content_026,eval_04,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_026,eval_04,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_026,eval_04,conciseness,1,
+content_026,eval_04,tone,0,감정적 표현이 과도하게 사용됨
+content_026,eval_05,accuracy,1,
+content_026,eval_05,completeness,1,
+content_026,eval_05,consistency,1,
+content_026,eval_05,clarity,2,
+content_026,eval_05,relevance,2,
+content_026,eval_05,conciseness,0,핵심 대비 분량이 과도함
+content_026,eval_05,tone,1,
+content_026,eval_06,accuracy,0,수치 오류가 발견됨
+content_026,eval_06,completeness,2,
+content_026,eval_06,consistency,2,
+content_026,eval_06,clarity,2,
+content_026,eval_06,relevance,2,
+content_026,eval_06,conciseness,1,
+content_026,eval_06,tone,0,감정적 표현이 과도하게 사용됨
+content_026,eval_07,accuracy,2,
+content_026,eval_07,completeness,1,
+content_026,eval_07,consistency,1,
+content_026,eval_07,clarity,2,
+content_026,eval_07,relevance,1,
+content_026,eval_07,conciseness,2,
+content_026,eval_07,tone,1,
+content_026,eval_08,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_026,eval_08,completeness,2,
+content_026,eval_08,consistency,0,앞뒤 문맥이 모순됨
+content_026,eval_08,clarity,1,
+content_026,eval_08,relevance,1,
+content_026,eval_08,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_026,eval_08,tone,1,
+content_026,eval_09,accuracy,2,
+content_026,eval_09,completeness,1,
+content_026,eval_09,consistency,1,
+content_026,eval_09,clarity,1,
+content_026,eval_09,relevance,1,
+content_026,eval_09,conciseness,1,
+content_026,eval_09,tone,2,
+content_026,eval_10,accuracy,1,
+content_026,eval_10,completeness,2,
+content_026,eval_10,consistency,2,
+content_026,eval_10,clarity,1,
+content_026,eval_10,relevance,1,
+content_026,eval_10,conciseness,1,
+content_026,eval_10,tone,2,
+content_026,eval_11,accuracy,1,
+content_026,eval_11,completeness,0,핵심 정보가 누락됨
+content_026,eval_11,consistency,0,초반과 후반의 주장이 상충됨
+content_026,eval_11,clarity,2,
+content_026,eval_11,relevance,0,주제와 무관한 내용이 포함됨
+content_026,eval_11,conciseness,2,
+content_026,eval_11,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_026,eval_12,accuracy,1,
+content_026,eval_12,completeness,1,
+content_026,eval_12,consistency,1,
+content_026,eval_12,clarity,1,
+content_026,eval_12,relevance,0,질문에 대한 직접적 답변이 아님
+content_026,eval_12,conciseness,2,
+content_026,eval_12,tone,2,
+content_027,eval_01,accuracy,2,
+content_027,eval_01,completeness,2,
+content_027,eval_01,consistency,2,
+content_027,eval_01,clarity,2,
+content_027,eval_01,relevance,1,
+content_027,eval_01,conciseness,2,
+content_027,eval_01,tone,2,
+content_027,eval_02,accuracy,2,
+content_027,eval_02,completeness,2,
+content_027,eval_02,consistency,2,
+content_027,eval_02,clarity,2,
+content_027,eval_02,relevance,2,
+content_027,eval_02,conciseness,1,
+content_027,eval_02,tone,2,
+content_027,eval_03,accuracy,1,
+content_027,eval_03,completeness,0,중요한 예외 사항이 언급되지 않음
+content_027,eval_03,consistency,2,
+content_027,eval_03,clarity,0,전문 용어 설명 없이 사용됨
+content_027,eval_03,relevance,1,
+content_027,eval_03,conciseness,2,
+content_027,eval_03,tone,2,
+content_027,eval_04,accuracy,2,
+content_027,eval_04,completeness,2,
+content_027,eval_04,consistency,1,
+content_027,eval_04,clarity,1,
+content_027,eval_04,relevance,1,
+content_027,eval_04,conciseness,1,
+content_027,eval_04,tone,1,
+content_027,eval_05,accuracy,1,
+content_027,eval_05,completeness,2,
+content_027,eval_05,consistency,0,문단 간 논리 흐름이 단절됨
+content_027,eval_05,clarity,2,
+content_027,eval_05,relevance,2,
+content_027,eval_05,conciseness,2,
+content_027,eval_05,tone,1,
+content_027,eval_06,accuracy,1,
+content_027,eval_06,completeness,1,
+content_027,eval_06,consistency,2,
+content_027,eval_06,clarity,2,
+content_027,eval_06,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_027,eval_06,conciseness,1,
+content_027,eval_06,tone,2,
+content_027,eval_07,accuracy,2,
+content_027,eval_07,completeness,2,
+content_027,eval_07,consistency,1,
+content_027,eval_07,clarity,2,
+content_027,eval_07,relevance,2,
+content_027,eval_07,conciseness,1,
+content_027,eval_07,tone,1,
+content_027,eval_08,accuracy,1,
+content_027,eval_08,completeness,1,
+content_027,eval_08,consistency,0,같은 수치를 다르게 표기함
+content_027,eval_08,clarity,2,
+content_027,eval_08,relevance,2,
+content_027,eval_08,conciseness,2,
+content_027,eval_08,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_027,eval_09,accuracy,2,
+content_027,eval_09,completeness,1,
+content_027,eval_09,consistency,0,동일 개념에 다른 용어를 혼용
+content_027,eval_09,clarity,1,
+content_027,eval_09,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_027,eval_09,conciseness,1,
+content_027,eval_09,tone,2,
+content_027,eval_10,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_027,eval_10,completeness,1,
+content_027,eval_10,consistency,2,
+content_027,eval_10,clarity,2,
+content_027,eval_10,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_027,eval_10,conciseness,1,
+content_027,eval_10,tone,1,
+content_027,eval_11,accuracy,2,
+content_027,eval_11,completeness,0,결론 부분이 생략됨
+content_027,eval_11,consistency,1,
+content_027,eval_11,clarity,1,
+content_027,eval_11,relevance,2,
+content_027,eval_11,conciseness,1,
+content_027,eval_11,tone,0,비격식적 표현이 부적절하게 사용됨
+content_027,eval_12,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_027,eval_12,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_027,eval_12,consistency,0,입장이 중간에 바뀌어 혼선을 야기함
+content_027,eval_12,clarity,1,
+content_027,eval_12,relevance,0,요청 범위를 벗어난 부가 설명이 과도함
+content_027,eval_12,conciseness,2,
+content_027,eval_12,tone,2,
+content_028,eval_01,accuracy,2,
+content_028,eval_01,completeness,1,
+content_028,eval_01,consistency,1,
+content_028,eval_01,clarity,2,
+content_028,eval_01,relevance,2,
+content_028,eval_01,conciseness,1,
+content_028,eval_01,tone,2,
+content_028,eval_02,accuracy,2,
+content_028,eval_02,completeness,1,
+content_028,eval_02,consistency,2,
+content_028,eval_02,clarity,2,
+content_028,eval_02,relevance,1,
+content_028,eval_02,conciseness,2,
+content_028,eval_02,tone,1,
+content_028,eval_03,accuracy,1,
+content_028,eval_03,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_028,eval_03,consistency,0,초반과 후반의 주장이 상충됨
+content_028,eval_03,clarity,2,
+content_028,eval_03,relevance,1,
+content_028,eval_03,conciseness,0,간결하게 전달 가능한 내용을 길게 풀어씀
+content_028,eval_03,tone,2,
+content_028,eval_04,accuracy,1,
+content_028,eval_04,completeness,1,
+content_028,eval_04,consistency,2,
+content_028,eval_04,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_028,eval_04,relevance,1,
+content_028,eval_04,conciseness,1,
+content_028,eval_04,tone,2,
+content_028,eval_05,accuracy,1,
+content_028,eval_05,completeness,0,중요한 예외 사항이 언급되지 않음
+content_028,eval_05,consistency,2,
+content_028,eval_05,clarity,1,
+content_028,eval_05,relevance,1,
+content_028,eval_05,conciseness,2,
+content_028,eval_05,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_028,eval_06,accuracy,0,핵심 사실 관계가 뒤바뀌어 서술됨
+content_028,eval_06,completeness,2,
+content_028,eval_06,consistency,0,문단 간 논리 흐름이 단절됨
+content_028,eval_06,clarity,1,
+content_028,eval_06,relevance,2,
+content_028,eval_06,conciseness,1,
+content_028,eval_06,tone,0,톤이 대상 독자에 맞지 않음
+content_028,eval_07,accuracy,1,
+content_028,eval_07,completeness,0,결론 부분이 생략됨
+content_028,eval_07,consistency,2,
+content_028,eval_07,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_028,eval_07,relevance,2,
+content_028,eval_07,conciseness,2,
+content_028,eval_07,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_028,eval_08,accuracy,1,
+content_028,eval_08,completeness,1,
+content_028,eval_08,consistency,0,같은 수치를 다르게 표기함
+content_028,eval_08,clarity,2,
+content_028,eval_08,relevance,2,
+content_028,eval_08,conciseness,0,불필요한 반복이 많음
+content_028,eval_08,tone,0,톤이 대상 독자에 맞지 않음
+content_028,eval_09,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_028,eval_09,completeness,2,
+content_028,eval_09,consistency,1,
+content_028,eval_09,clarity,1,
+content_028,eval_09,relevance,2,
+content_028,eval_09,conciseness,2,
+content_028,eval_09,tone,1,
+content_028,eval_10,accuracy,1,
+content_028,eval_10,completeness,1,
+content_028,eval_10,consistency,1,
+content_028,eval_10,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_028,eval_10,relevance,1,
+content_028,eval_10,conciseness,1,
+content_028,eval_10,tone,0,톤이 대상 독자에 맞지 않음
+content_028,eval_11,accuracy,1,
+content_028,eval_11,completeness,1,
+content_028,eval_11,consistency,1,
+content_028,eval_11,clarity,2,
+content_028,eval_11,relevance,1,
+content_028,eval_11,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_028,eval_11,tone,0,톤이 대상 독자에 맞지 않음
+content_028,eval_12,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_028,eval_12,completeness,2,
+content_028,eval_12,consistency,0,문단 간 논리 흐름이 단절됨
+content_028,eval_12,clarity,1,
+content_028,eval_12,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_028,eval_12,conciseness,1,
+content_028,eval_12,tone,0,비격식적 표현이 부적절하게 사용됨
+content_029,eval_01,accuracy,2,
+content_029,eval_01,completeness,2,
+content_029,eval_01,consistency,1,
+content_029,eval_01,clarity,2,
+content_029,eval_01,relevance,2,
+content_029,eval_01,conciseness,2,
+content_029,eval_01,tone,2,
+content_029,eval_02,accuracy,1,
+content_029,eval_02,completeness,1,
+content_029,eval_02,consistency,2,
+content_029,eval_02,clarity,2,
+content_029,eval_02,relevance,2,
+content_029,eval_02,conciseness,2,
+content_029,eval_02,tone,0,감정적 표현이 과도하게 사용됨
+content_029,eval_03,accuracy,1,
+content_029,eval_03,completeness,0,배경 설명이 빠져 맥락 파악이 어려움
+content_029,eval_03,consistency,2,
+content_029,eval_03,clarity,1,
+content_029,eval_03,relevance,1,
+content_029,eval_03,conciseness,1,
+content_029,eval_03,tone,0,대상 연령층에 맞지 않는 어조가 사용됨
+content_029,eval_04,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_029,eval_04,completeness,1,
+content_029,eval_04,consistency,0,문단 간 논리 흐름이 단절됨
+content_029,eval_04,clarity,2,
+content_029,eval_04,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_029,eval_04,conciseness,1,
+content_029,eval_04,tone,0,비격식적 표현이 부적절하게 사용됨
+content_029,eval_05,accuracy,1,
+content_029,eval_05,completeness,1,
+content_029,eval_05,consistency,1,
+content_029,eval_05,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_029,eval_05,relevance,1,
+content_029,eval_05,conciseness,2,
+content_029,eval_05,tone,2,
+content_029,eval_06,accuracy,1,
+content_029,eval_06,completeness,1,
+content_029,eval_06,consistency,1,
+content_029,eval_06,clarity,2,
+content_029,eval_06,relevance,1,
+content_029,eval_06,conciseness,0,같은 내용을 다른 표현으로 여러 번 서술함
+content_029,eval_06,tone,0,전문적 맥락에서 부적절한 구어체가 포함됨
+content_029,eval_07,accuracy,2,
+content_029,eval_07,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_029,eval_07,consistency,2,
+content_029,eval_07,clarity,2,
+content_029,eval_07,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_029,eval_07,conciseness,2,
+content_029,eval_07,tone,2,
+content_029,eval_08,accuracy,1,
+content_029,eval_08,completeness,0,결론 부분이 생략됨
+content_029,eval_08,consistency,0,동일 개념에 다른 용어를 혼용
+content_029,eval_08,clarity,1,
+content_029,eval_08,relevance,2,
+content_029,eval_08,conciseness,2,
+content_029,eval_08,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_029,eval_09,accuracy,1,
+content_029,eval_09,completeness,1,
+content_029,eval_09,consistency,2,
+content_029,eval_09,clarity,0,핵심 메시지가 어디인지 파악하기 어려움
+content_029,eval_09,relevance,2,
+content_029,eval_09,conciseness,1,
+content_029,eval_09,tone,0,감정적 표현이 과도하게 사용됨
+content_029,eval_10,accuracy,0,검증되지 않은 내용이 단정적으로 기술됨
+content_029,eval_10,completeness,1,
+content_029,eval_10,consistency,2,
+content_029,eval_10,clarity,2,
+content_029,eval_10,relevance,2,
+content_029,eval_10,conciseness,0,불필요한 수식어와 부연 설명이 많음
+content_029,eval_10,tone,1,
+content_029,eval_11,accuracy,1,
+content_029,eval_11,completeness,0,요청 범위의 절반만 다룸
+content_029,eval_11,consistency,1,
+content_029,eval_11,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_029,eval_11,relevance,2,
+content_029,eval_11,conciseness,2,
+content_029,eval_11,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_029,eval_12,accuracy,0,출처와 일치하지 않는 내용이 서술됨
+content_029,eval_12,completeness,2,
+content_029,eval_12,consistency,1,
+content_029,eval_12,clarity,1,
+content_029,eval_12,relevance,1,
+content_029,eval_12,conciseness,2,
+content_029,eval_12,tone,0,비격식적 표현이 부적절하게 사용됨
+content_030,eval_01,accuracy,2,
+content_030,eval_01,completeness,2,
+content_030,eval_01,consistency,2,
+content_030,eval_01,clarity,2,
+content_030,eval_01,relevance,1,
+content_030,eval_01,conciseness,2,
+content_030,eval_01,tone,1,
+content_030,eval_02,accuracy,2,
+content_030,eval_02,completeness,2,
+content_030,eval_02,consistency,2,
+content_030,eval_02,clarity,2,
+content_030,eval_02,relevance,2,
+content_030,eval_02,conciseness,2,
+content_030,eval_02,tone,2,
+content_030,eval_03,accuracy,1,
+content_030,eval_03,completeness,2,
+content_030,eval_03,consistency,0,문단 간 논리 흐름이 단절됨
+content_030,eval_03,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_030,eval_03,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_030,eval_03,conciseness,1,
+content_030,eval_03,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_030,eval_04,accuracy,2,
+content_030,eval_04,completeness,1,
+content_030,eval_04,consistency,1,
+content_030,eval_04,clarity,1,
+content_030,eval_04,relevance,0,질문에 대한 직접적 답변이 아님
+content_030,eval_04,conciseness,2,
+content_030,eval_04,tone,1,
+content_030,eval_05,accuracy,2,
+content_030,eval_05,completeness,1,
+content_030,eval_05,consistency,0,초반과 후반의 주장이 상충됨
+content_030,eval_05,clarity,0,단락 구분이 없어 내용 흐름을 따라가기 어려움
+content_030,eval_05,relevance,1,
+content_030,eval_05,conciseness,1,
+content_030,eval_05,tone,1,
+content_030,eval_06,accuracy,2,
+content_030,eval_06,completeness,1,
+content_030,eval_06,consistency,2,
+content_030,eval_06,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_030,eval_06,relevance,2,
+content_030,eval_06,conciseness,1,
+content_030,eval_06,tone,1,
+content_030,eval_07,accuracy,0,사실과 다른 정보가 포함되어 있음
+content_030,eval_07,completeness,2,
+content_030,eval_07,consistency,0,앞뒤 문맥이 모순됨
+content_030,eval_07,clarity,0,전문 용어 설명 없이 사용됨
+content_030,eval_07,relevance,0,중심 주제에서 벗어나 지엽적 내용에 집중함
+content_030,eval_07,conciseness,1,
+content_030,eval_07,tone,2,
+content_030,eval_08,accuracy,1,
+content_030,eval_08,completeness,1,
+content_030,eval_08,consistency,0,앞뒤 문맥이 모순됨
+content_030,eval_08,clarity,0,문장 구조가 모호하여 의미 파악 어려움
+content_030,eval_08,relevance,0,배경 설명이 지나쳐 본론이 묻힘
+content_030,eval_08,conciseness,1,
+content_030,eval_08,tone,0,지나치게 딱딱한 표현으로 전달력이 낮음
+content_030,eval_09,accuracy,0,잘못된 날짜 또는 인물 정보가 포함됨
+content_030,eval_09,completeness,0,요청한 항목 중 일부가 다뤄지지 않음
+content_030,eval_09,consistency,1,
+content_030,eval_09,clarity,2,
+content_030,eval_09,relevance,1,
+content_030,eval_09,conciseness,1,
+content_030,eval_09,tone,1,
+content_030,eval_10,accuracy,1,
+content_030,eval_10,completeness,2,
+content_030,eval_10,consistency,0,같은 수치를 다르게 표기함
+content_030,eval_10,clarity,2,
+content_030,eval_10,relevance,0,답변이 다른 질문에 더 적합한 내용으로 구성됨
+content_030,eval_10,conciseness,1,
+content_030,eval_10,tone,2,
+content_030,eval_11,accuracy,1,
+content_030,eval_11,completeness,2,
+content_030,eval_11,consistency,1,
+content_030,eval_11,clarity,0,문장이 지나치게 길어 가독성이 떨어짐
+content_030,eval_11,relevance,0,질문에 대한 직접적 답변이 아님
+content_030,eval_11,conciseness,1,
+content_030,eval_11,tone,2,
+content_030,eval_12,accuracy,0,검증되지 않은 내용이 단정적으로 기술됨
+content_030,eval_12,completeness,2,
+content_030,eval_12,consistency,2,
+content_030,eval_12,clarity,2,
+content_030,eval_12,relevance,1,
+content_030,eval_12,conciseness,1,
+content_030,eval_12,tone,1,
