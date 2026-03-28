@@ -44,6 +44,17 @@ npm install
 npm run dev
 ```
 
+### 빌드 방식
+
+이 프로젝트는 [Claude Code](https://claude.ai/code)와 커스텀 스킬을 활용해 제작되었습니다.
+
+| 스킬 / 프롬프트 | 역할 |
+|----------------|------|
+| `ai-eval-calibration-context.skill` | 프로젝트 전반의 컨텍스트 제공 — 평가 기준, 데이터 구조, 도메인 정의 |
+| `prompt-generate-demo-dataset.md` | 데모용 캘리브레이션 CSV 데이터 생성 |
+| `prompt-step2-dashboard.md` | React 대시보드 앱 초기 구현 |
+| `prompt-step2b-sop-tab.md` | 평가 가이드라인(SOP) 탭 추가 |
+
 ---
 
 > 계속 업데이트 예정입니다.
