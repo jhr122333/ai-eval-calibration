@@ -2,14 +2,12 @@ import { useState } from 'react';
 import FileUpload from './components/FileUpload';
 import OverviewDashboard from './components/OverviewDashboard';
 import EvaluatorAnalysis from './components/EvaluatorAnalysis';
-import ContentAnalysis from './components/ContentAnalysis';
 import GuidelinesTab from './components/GuidelinesTab';
 import './index.css';
 
 const TABS = [
   { id: 'overview', label: '개요' },
   { id: 'evaluators', label: '평가자 분석' },
-  { id: 'contents', label: '콘텐츠 분석' },
   { id: 'guidelines', label: '평가 가이드라인' },
 ];
 
@@ -80,9 +78,6 @@ export default function App() {
         )}
         {activeTab === 'evaluators' && (
           <EvaluatorAnalysis data={dataset.data} />
-        )}
-        {activeTab === 'contents' && (
-          <ContentAnalysis data={dataset.data} />
         )}
         {activeTab === 'guidelines' && (
           <GuidelinesTab />
