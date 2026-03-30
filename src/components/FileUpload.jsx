@@ -53,7 +53,7 @@ export default function FileUpload({ onDataLoaded }) {
           AI 평가 캘리브레이션 대시보드
         </h1>
         <p className="text-slate-500 max-w-2xl">
-          1차 평가와 2차 검수 결과를 비교해서 정확도와 수정 패턴을 확인합니다.
+          평가자 간 점수 불일치를 자동 탐지하고, 편향 패턴과 캘리브레이션 포인트를 시각화합니다.
         </p>
         <div className="mt-4 flex justify-center">
           <a

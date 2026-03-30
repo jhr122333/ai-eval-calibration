@@ -1,8 +1,5 @@
 import { useMemo, useState } from 'react';
-import {
-  calculateContentChangeSummary,
-  generateContentCriterionChangeHeatmap,
-} from '../utils/disagreementDetector';
+import { calculateDisagreement, calculateContentSummary, generateHeatmapData } from '../utils/disagreementDetector';
 
 const CRITERION_LABELS = {
   accuracy: '정확성',
@@ -14,44 +11,60 @@ const CRITERION_LABELS = {
   tone: '톤 적절성',
 };
 
-function percent(value) {
-  return `${(value * 100).toFixed(0)}%`;
-}
+const SCORE_STYLE = {
+  0: { bg: '#fee2e2', color: '#991b1b' },
+  1: { bg: '#fef9c3', color: '#92400e' },
+  2: { bg: '#dcfce7', color: '#166534' },
+};
 
-function changeRateToColor(value) {
+/** Map stdDev (0..1) to a green→yellow→red color */
+function stdDevToColor(value) {
   if (value === null) return '#f8fafc';
-  const ratio = Math.min(Math.max(value, 0), 1);
-  const r = Math.round(16 + ratio * (239 - 16));
+  const ratio = Math.min(Math.max(value, 0), 1); // stdDev max ≈ 1 for 3-point scale
+  const r = Math.round(16  + ratio * (239 - 16));
   const g = Math.round(196 - ratio * (196 - 68));
-  const b = Math.round(87 - ratio * (87 - 68));
+  const b = Math.round(87  - ratio * (87  - 68));
   return `rgb(${r},${g},${b})`;
 }
 
-function HeatmapCell({ value, onClick, selected }) {
+function HeatmapCell({ value, selected, onClick }) {
+  const bg = stdDevToColor(value);
+  const light = value !== null && value > 0.5;
   return (
     <td
-      style={{ backgroundColor: changeRateToColor(value), color: value !== null && value < 0.28 ? '#0f172a' : '#fff' }}
-      className={`text-center text-xs py-1.5 px-1 font-semibold border cursor-pointer transition-all ${selected ? 'border-blue-500 ring-1 ring-blue-500' : 'border-white'}`}
+      style={{ backgroundColor: bg, color: light ? '#fff' : '#0f172a' }}
+      className={`text-center text-xs py-1.5 px-1 font-semibold border cursor-pointer transition-all ${
+        selected ? 'border-blue-500 ring-1 ring-blue-500' : 'border-white'
+      }`}
       onClick={onClick}
-      title={value !== null ? `변경률 ${percent(value)}` : '—'}
+      title={value !== null ? `σ = ${value.toFixed(2)}` : '—'}
     >
-      {value !== null ? percent(value) : '—'}
+      {value !== null ? value.toFixed(2) : '—'}
     </td>
   );
 }
 
 export default function ContentAnalysis({ data }) {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(null); // { contentId, criterion }
 
-  const contentSummary = useMemo(() => calculateContentChangeSummary(data), [data]);
-  const heatmap = useMemo(() => generateContentCriterionChangeHeatmap(data), [data]);
+  const heatmap       = useMemo(() => generateHeatmapData(data, 'content', 'stdDev'), [data]);
+  const contentSummary = useMemo(() => calculateContentSummary(data), [data]);
+  const disagreements  = useMemo(() => calculateDisagreement(data), [data]);
 
+  // Detail panel: individual scores for selected (content, criterion)
   const detailScores = useMemo(() => {
     if (!selected) return [];
     return data
-      .filter((row) => row.contentId === selected.contentId && row.criterion === selected.criterion)
-      .sort((a, b) => a.primaryEvaluatorId.localeCompare(b.primaryEvaluatorId, undefined, { numeric: true }));
+      .filter((r) => r.contentId === selected.contentId && r.criterion === selected.criterion)
+      .sort((a, b) => a.evaluatorId.localeCompare(b.evaluatorId, undefined, { numeric: true }));
   }, [data, selected]);
+
+  const detailStats = useMemo(() => {
+    if (!selected) return null;
+    return disagreements.find(
+      (d) => d.contentId === selected.contentId && d.criterion === selected.criterion
+    ) ?? null;
+  }, [disagreements, selected]);
 
   function handleCellClick(contentId, criterion) {
     setSelected((prev) =>
@@ -61,38 +74,41 @@ export default function ContentAnalysis({ data }) {
 
   return (
     <div className="space-y-6">
+      {/* Heatmap */}
       <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
-        <h2 className="text-base font-semibold text-slate-700 mb-1">콘텐츠 × 항목 변경률</h2>
-        <p className="text-xs text-slate-400 mb-4">셀을 클릭하면 해당 콘텐츠와 항목에서 어떤 수정이 있었는지 확인할 수 있습니다.</p>
+        <h2 className="text-base font-semibold text-slate-700 mb-1">콘텐츠 × 항목 불일치 히트맵</h2>
+        <p className="text-xs text-slate-400 mb-4">
+          셀 값 = 평가자 간 점수 표준편차(σ). 빨간 셀일수록 불일치가 큼. 클릭하면 상세 점수를 확인할 수 있습니다.
+        </p>
         <div className="overflow-auto">
           <table className="text-xs border-collapse">
             <thead>
               <tr>
                 <th className="text-left text-slate-400 font-medium pr-3 pb-1 whitespace-nowrap">콘텐츠</th>
-                {heatmap.columns.map((criterion) => (
-                  <th key={criterion} className="text-slate-500 font-medium pb-1 px-2 text-center whitespace-nowrap">
-                    {(CRITERION_LABELS[criterion] ?? criterion).slice(0, 5)}
+                {heatmap.columns.map((c) => (
+                  <th key={c} className="text-slate-500 font-medium pb-1 px-2 text-center whitespace-nowrap">
+                    {(CRITERION_LABELS[c] ?? c).slice(0, 5)}
                   </th>
                 ))}
-                <th className="text-slate-400 font-medium pb-1 px-2 text-right whitespace-nowrap">전체 변경률</th>
+                <th className="text-slate-400 font-medium pb-1 px-2 text-right whitespace-nowrap">전체 σ</th>
               </tr>
             </thead>
             <tbody>
-              {heatmap.rows.map((contentId, rowIndex) => {
-                const summary = contentSummary.find((item) => item.contentId === contentId);
+              {heatmap.rows.map((contentId, rowIdx) => {
+                const cs = contentSummary.find((s) => s.contentId === contentId);
                 return (
                   <tr key={contentId} className="hover:brightness-95">
                     <td className="text-slate-500 font-mono pr-3 py-1 whitespace-nowrap">{contentId}</td>
-                    {heatmap.values[rowIndex].map((value, columnIndex) => (
+                    {heatmap.values[rowIdx].map((val, colIdx) => (
                       <HeatmapCell
-                        key={`${contentId}-${heatmap.columns[columnIndex]}`}
-                        value={value}
-                        selected={selected?.contentId === contentId && selected?.criterion === heatmap.columns[columnIndex]}
-                        onClick={() => handleCellClick(contentId, heatmap.columns[columnIndex])}
+                        key={`${contentId}-${heatmap.columns[colIdx]}`}
+                        value={val}
+                        selected={selected?.contentId === contentId && selected?.criterion === heatmap.columns[colIdx]}
+                        onClick={() => handleCellClick(contentId, heatmap.columns[colIdx])}
                       />
                     ))}
                     <td className="text-right px-2 font-semibold text-slate-600">
-                      {summary ? percent(summary.changeRate) : '—'}
+                      {cs ? cs.overallStdDev.toFixed(2) : '—'}
                     </td>
                   </tr>
                 );
@@ -101,66 +117,57 @@ export default function ContentAnalysis({ data }) {
           </table>
         </div>
         <div className="flex items-center gap-2 mt-3 text-xs text-slate-500">
-          <span>변경 적음</span>
+          <span>합의(σ 낮음)</span>
           <div className="flex-1 h-2 rounded" style={{ background: 'linear-gradient(to right, rgb(16,196,87), rgb(250,204,0), rgb(239,68,68))' }} />
-          <span>변경 많음</span>
+          <span>불일치(σ 높음)</span>
         </div>
       </div>
 
-      {selected ? (
+      {/* Detail panel */}
+      {selected && (
         <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-base font-semibold text-slate-700">
-              {selected.contentId} / {CRITERION_LABELS[selected.criterion] ?? selected.criterion}
-            </h2>
+            <div>
+              <h2 className="text-base font-semibold text-slate-800">
+                {selected.contentId} / {CRITERION_LABELS[selected.criterion] ?? selected.criterion}
+              </h2>
+              {detailStats && (
+                <p className="text-sm text-slate-500 mt-0.5">
+                  평균 {detailStats.mean.toFixed(2)} · σ {detailStats.stdDev.toFixed(2)}
+                  &ensp;|&ensp;
+                  <span className="text-red-600">0점 {detailStats.scoreDistribution[0]}명</span>
+                  &ensp;·&ensp;
+                  <span className="text-amber-600">1점 {detailStats.scoreDistribution[1]}명</span>
+                  &ensp;·&ensp;
+                  <span className="text-emerald-600">2점 {detailStats.scoreDistribution[2]}명</span>
+                </p>
+              )}
+            </div>
             <button onClick={() => setSelected(null)} className="text-slate-400 hover:text-slate-600 text-sm">
               ✕ 닫기
             </button>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="text-left text-slate-400 border-b border-slate-100">
-                  <th className="pb-2 font-medium">1차 평가자</th>
-                  <th className="pb-2 font-medium">검수자</th>
-                  <th className="pb-2 font-medium text-right">1차</th>
-                  <th className="pb-2 font-medium text-right">2차</th>
-                  <th className="pb-2 font-medium">변경</th>
-                  <th className="pb-2 font-medium">사유</th>
-                </tr>
-              </thead>
-              <tbody>
-                {detailScores.map((row) => {
-                  const isChanged = row.primaryScore !== row.secondaryScore;
-                  const isUpward = row.secondaryScore > row.primaryScore;
-
-                  return (
-                    <tr key={`${row.contentId}-${row.primaryEvaluatorId}-${row.criterion}`} className="border-b border-slate-50 hover:bg-slate-50">
-                      <td className="py-3 font-mono text-xs text-slate-600">{row.primaryEvaluatorId}</td>
-                      <td className="py-3 font-mono text-xs text-slate-600">{row.reviewerId}</td>
-                      <td className="py-3 text-right font-semibold text-slate-500">{row.primaryScore}</td>
-                      <td className="py-3 text-right font-semibold text-slate-900">{row.secondaryScore}</td>
-                      <td className="py-3">
-                        {isChanged ? (
-                          <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold ${isUpward ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}>
-                            {isUpward ? '상향 수정' : '하향 수정'}
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold bg-slate-100 text-slate-600">
-                            유지
-                          </span>
-                        )}
-                      </td>
-                      <td className="py-3 text-slate-600">{row.secondaryReason || row.primaryReason || '—'}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {detailScores.map((row) => {
+              const s = SCORE_STYLE[row.score];
+              return (
+                <div
+                  key={row.evaluatorId}
+                  style={{ backgroundColor: s.bg, color: s.color }}
+                  className="rounded-xl p-3 border border-white/60"
+                >
+                  <p className="text-xs font-mono font-semibold mb-1 opacity-70">{row.evaluatorId}</p>
+                  <p className="text-2xl font-bold">{row.score}</p>
+                  {row.reason ? (
+                    <p className="text-xs mt-1 opacity-80 leading-snug">{row.reason}</p>
+                  ) : null}
+                </div>
+              );
+            })}
           </div>
         </div>
-      ) : null}
+      )}
     </div>
   );
 }
