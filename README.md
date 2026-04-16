@@ -104,7 +104,7 @@ npm run dev
 
 | Page 1 — 평가 현황 요약 | Page 2 — 월별 추이 & 검수자 분석 |
 |---|---|
-| ![Page 1](screenshots/dashboard_page1.png) | ![Page 2](screenshots/dashboard_page2.png) |
+| ![Page 1](screenshots/page1_summary.png) | ![Page 2](screenshots/page2_trend.png) |
 
 ### 프로젝트 개요
 
