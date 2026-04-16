@@ -100,6 +100,12 @@ npm run dev
 
 > AI 생성 콘텐츠 품질 평가팀의 평가자 간 정확도를 모니터링하는 Power BI 대시보드
 
+### 스크린샷
+
+| Page 1 — 평가 현황 요약 | Page 2 — 월별 추이 & 검수자 분석 |
+|---|---|
+| ![Page 1](screenshots/dashboard_page1.png) | ![Page 2](screenshots/dashboard_page2.png) |
+
 ### 프로젝트 개요
 
 AI가 제품 SDP(Standard Design Package) 문서 내 텍스트를 바탕으로 생성한 Q&A를 평가자가 채점하고, 검수자가 검토하는 평가 워크플로우에서 **평가 품질을 데이터 기반으로 관리**하기 위해 제작한 대시보드입니다.
